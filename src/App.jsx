@@ -1,16 +1,28 @@
-import { useState } from 'react'
-import Navbar from './Componentes/Navbar'
+// src/App.jsx
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import './App.css'; // Importing the CSS file for styling
 
-import './App.css'
+import Navbar from './Componentes/Navbar';
+import home from './Componentes/Home';
+import Tienda from './Componentes/Tienda';
+import Nosotros from './Componentes/Nosotros';
+import Contacto from './Componentes/Contacto';
+import ServicioTecnico from './Componentes/ServicioTecnico';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-     <Navbar />
-    </>
-  )
+    <BrowserRouter>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<home />} />
+        <Route path="/servicio-tecnico" element={<ServicioTecnico />} />
+        <Route path="/tienda" element={<Tienda />} />
+        <Route path="/nosotros" element={<Nosotros />} />
+        <Route path="/contacto" element={<Contacto />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
