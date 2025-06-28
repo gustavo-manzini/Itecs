@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import { Link } from 'react-router-dom';
 import { FiSearch, FiUser, FiShoppingBag, FiMenu, FiX } from 'react-icons/fi';
 
 function Navbar() {
@@ -9,7 +9,7 @@ function Navbar() {
     <nav className="navbar">
       {/* Logo */}
       <div className="navbar-logo">
-        <span className="logo-it">It</span>
+        <span className="logo-it" to="/src/App.jsx">It</span>
         <span className="logo-itecs">itecs</span>
       </div>
 

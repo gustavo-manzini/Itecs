@@ -6,7 +6,7 @@ body {
 
 /* Navbar */
 .navbar {
-  background-color: #0e0f11;
+  background-color: #111518;
   color: white;
   padding: 15px 30px;
   display: flex;
@@ -26,6 +26,8 @@ body {
 
 .logo-it {
   color: #00bfff;
+  font-size: 40px;
+  cursor: pointer;
 }
 
 .logo-itecs {
