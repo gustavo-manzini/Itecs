@@ -1,7 +1,7 @@
 /* General */
 body {
   margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* Navbar */
@@ -43,7 +43,6 @@ body {
   margin: 0;
   padding: 0;
   font-weight: bold;
-
 }
 
 .navbar-links li {
@@ -52,7 +51,6 @@ body {
   transition: transform 0.2s ease, color 0.3s;
   display: inline-block;
 }
-
 
 .navbar-links li:hover {
   color: #00bfff;
@@ -69,7 +67,6 @@ body {
   gap: 20px;
   font-size: 18px;
   color: #888;
- 
 }
 
 .icon {
@@ -104,7 +101,7 @@ body {
     z-index: 10;
   }
 
-  .navbar-links.active {
+  .navbar-links.open {
     display: flex;
   }
 
@@ -116,7 +113,6 @@ body {
     display: block;
   }
 }
-
 
 a {
   color: inherit;

@@ -1,21 +1,21 @@
 // src/App.jsx
-import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import './App.css'; // Importing the CSS file for styling
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import "./App.css"; // Importing the CSS file for styling
 
-import Navbar from './Componentes/Navbar';
-import home from './Componentes/Home';
-import Tienda from './Componentes/Tienda';
-import Nosotros from './Componentes/Nosotros';
-import Contacto from './Componentes/Contacto';
-import ServicioTecnico from './Componentes/ServicioTecnico';
+import Navbar from "./Componentes/Navbar";
+import Home from "./Componentes/Home";
+import Tienda from "./Componentes/Tienda";
+import Nosotros from "./Componentes/Nosotros";
+import Contacto from "./Componentes/Contacto";
+import ServicioTecnico from "./Componentes/ServicioTecnico";
 
 function App() {
   return (
     <BrowserRouter>
       <Navbar />
       <Routes>
-        <Route path="/" element={<home />} />
+        <Route path="/" element={<Home />} />
         <Route path="/servicio-tecnico" element={<ServicioTecnico />} />
         <Route path="/tienda" element={<Tienda />} />
         <Route path="/nosotros" element={<Nosotros />} />
