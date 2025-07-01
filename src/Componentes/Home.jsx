@@ -1,5 +1,3 @@
-import iphone16Image from "../";
-
 function home() {
   return (
     <div>

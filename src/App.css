@@ -6,7 +6,7 @@ body {
 
 /* Navbar */
 .navbar {
-  background-color: #111518;
+  background-color: #111519;
   color: white;
   padding: 15px 30px;
   display: flex;
@@ -22,6 +22,7 @@ body {
   font-size: 24px;
   font-weight: bold;
   cursor: pointer;
+  transition: transform 0.2s ease, color 0.3s;
 }
 
 .logo-it {
@@ -33,6 +34,11 @@ body {
 .logo-itecs {
   color: white;
   margin-left: 4px;
+}
+
+.navbar-logo:hover {
+  color: #00bfff;
+  transform: translateY(-3px);
 }
 
 /* Links */
@@ -88,21 +94,27 @@ body {
 /* Mobile styles */
 @media (max-width: 768px) {
   .navbar-links {
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 1s cubic-bezier(0.77, 0, 0.175, 1), opacity 1s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     position: absolute;
     top: 60px;
     left: 0;
     right: 0;
-    background-color: #0e0f11;
-    flex-direction: column;
-    align-items: center;
-    display: none;
-    padding: 20px 0;
+    background-color: #111518;
+    padding: 0;
     gap: 20px;
     z-index: 10;
   }
 
   .navbar-links.open {
-    display: flex;
+    max-height: 500px; /* Ajusta según el contenido */
+    opacity: 1;
+    padding: 20px 0;
   }
 
   .navbar-icons {
