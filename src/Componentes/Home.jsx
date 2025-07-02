@@ -1,8 +1,10 @@
+import React from "react";
+import "../App.css";
+
 function home() {
   return (
-    <div>
-      <h1>Bienvenido a Itecs</h1>
-      <p>Tu solución tecnológica integral</p>
+    <div className="rectangulo-container">
+      <div className="rectangulo"></div>
     </div>
   );
 }

@@ -1,6 +1,10 @@
 /* General */
 body {
   margin: 0;
+  height: 100vh;
+
+  justify-content: center;
+  align-items: center;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -9,10 +13,11 @@ body {
   background-color: #41454c;
   color: white;
   padding: 15px 30px;
+  height: 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: relative;
+  position: sticky;
 }
 
 /* Logo */
@@ -32,7 +37,7 @@ body {
 }
 
 .logo-itecs {
-  color: white;
+  color: rgb(230, 230, 230);
   margin-left: 4px;
 }
 
@@ -52,7 +57,7 @@ body {
 }
 
 .navbar-links li {
-  color: #bbb9b9;
+  color: rgb(213, 213, 213);
   cursor: pointer;
   transition: transform 0.2s ease, color 0.3s;
   display: inline-block;
@@ -129,4 +134,23 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+/* Home */
+.rectangulo {
+  width: 700px;
+  height: 150px;
+  background: linear-gradient(to right, #808080, #dcdcdc);
+  border-radius: 10px;
+  border: 1px solid #444;
+  text-align: center;
+}
+
+/* Centrar el rectángulo en pantalla */
+.rectangulo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+  width: 100%;
 }
