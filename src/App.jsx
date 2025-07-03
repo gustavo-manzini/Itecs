@@ -1,7 +1,7 @@
 // src/App.jsx
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import "./App.css"; // Importing the CSS file for styling
+import "./App.css";
 
 import Navbar from "./Componentes/Navbar";
 import Home from "./Componentes/Home";
