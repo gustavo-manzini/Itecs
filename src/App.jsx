@@ -1,4 +1,4 @@
-// src/App.jsx
+
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
@@ -8,7 +8,7 @@ import Home from "./Componentes/Home";
 import Tienda from "./Componentes/Tienda";
 import Nosotros from "./Componentes/Nosotros";
 import Contacto from "./Componentes/Contacto";
-import ServicioTecnico from "./Componentes/ServicioTecnico";
+import ServicioTecnico from "./Componentes/Serviciotecnico";
 
 function App() {
   return (

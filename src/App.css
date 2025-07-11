@@ -174,7 +174,10 @@ a {
   flex-direction: row;
   justify-content: space-between;
   margin-top: 20px;
-  max-height: 330px;
+  max-width: 1150px;
+  width: 100%;
+  margin-left: auto; /* Centrado */
+  margin-right: auto; /* Centrado */
 }
 
 .hero-section h1 {
@@ -193,9 +196,90 @@ a {
 .cta-button:hover {
   background-color: #005bb5;
 }
+
 .hero-section img {
   max-width: 400px;
 }
 .imagen {
   display: flex;
+  margin-right: 90px;
+}
+
+
+/* formularios */
+
+.formulario {
+  max-width: 600px;
+  margin: 40px auto;
+  background: #f9f9f9;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-family: sans-serif;
+}
+
+.formulario h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.formulario label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.formulario input,
+.formulario select,
+.formulario textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.formulario button {
+  margin-top: 25px;
+  background-color: #015b98;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.formulario button:hover {
+  background-color: #014270;
+}
+
+.slider-btn button {
+  background: linear-gradient(135deg, #00bfff 0%, #0070f3 100%);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  margin: 0 8px;
+  font-size: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,112,243,0.15);
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider-btn button:hover {
+  background: linear-gradient(135deg, #005bb5 0%, #00aaff 100%);
+  transform: scale(1.12) translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0,112,243,0.22);
+}
+
+.slider-btn button:active {
+  transform: scale(0.96);
+  box-shadow: 0 1px 4px rgba(0,112,243,0.10);
 }
