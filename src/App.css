@@ -2,7 +2,6 @@
 body {
   margin: 0;
   height: 100vh;
-
   justify-content: center;
   align-items: center;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -283,3 +282,93 @@ a {
   transform: scale(0.96);
   box-shadow: 0 1px 4px rgba(0,112,243,0.10);
 }
+
+/* formulario */
+
+.contenedor{
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #eef2f6;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  margin-top: 25px;
+}
+
+h2{
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+}
+.subtitulo{
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+.opciones{
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem; 
+}
+
+.opciones button {
+  flex: 1;
+  min-width: 130px;
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  background-color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.opciones button:hover {
+  background-color: #eef5ff;
+  border-color: #a7c7f2;
+}
+
+.formulario{
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.formualrio h3{
+  margin-bottom: 1rem;
+  color: #34495e;
+}
+.formulario label{
+  display: block;
+  margin-top: 0.8rem;
+  font-weight: 600;
+}
+.formulario input{
+  width: 100%;
+  padding: 0.6rem;
+  margin-top: .3rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: border 0.3s;
+}
+.formualrio input:focus{
+   border-color: #3498db;
+   outline: none;
+}
+.mensaje{
+  font-style: italic;
+  color: #888;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* .centro-formulario{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #eef2f6;
+} */
