@@ -11,7 +11,7 @@ const slideData = [
     ),
     text2: "Más sostenible, más inteligente, más económico",
     img: "/public/home/iphone16.webp",
-    alt: "Iphone 16"
+    alt: "Iphone 16",
   },
   {
     text1: "MacBook Pro como nuevo",
@@ -22,8 +22,8 @@ const slideData = [
     ),
     text2: "Ahorra y cuida el planeta",
     img: "/16promax/cameracontrol.jpeg",
-    alt: "MacBook Pro"
-  }
+    alt: "MacBook Pro",
+  },
 ];
 
 const Slider = () => {
@@ -57,7 +57,17 @@ const Slider = () => {
 
       <div className="slider-controls">
         <button onClick={prevSlide} aria-label="Previous Slide">
-          &#8592;
+          <svg
+            width="24"
+            height="24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="3"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <polyline points="15 18 9 12 15 6" />
+          </svg>
         </button>
         <div className="slider-dots">
           {slideData.map((_, index) => (
@@ -69,9 +79,9 @@ const Slider = () => {
             ></button>
           ))}
         </div>
-        <button onClick={nextSlide} aria-label="Next Slide">
-          &#8594;
-        </button>
+     <button onClick={nextSlide} aria-label="Next Slide">
+  <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="9 6 15 12 9 18"/></svg>
+</button>
       </div>
     </div>
   );
