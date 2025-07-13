@@ -173,15 +173,16 @@ a {
   flex-direction: row;
   justify-content: space-between;
   margin-top: 20px;
-  max-width: 1150px;
+  max-width: 1650px;
   width: 100%;
-  margin-left: auto; /* Centrado */
-  margin-right: auto; /* Centrado */
+  margin-left: auto; 
+  margin-right: auto; 
 }
 
 .hero-section h1 {
   font-size: 2.5rem;
   font-weight: bold;
+
 }
 
 .hero-section .cta-button {
@@ -197,7 +198,7 @@ a {
 }
 
 .hero-section img {
-  max-width: 400px;
+  max-width: 450px;
 }
 .imagen {
   display: flex;
@@ -365,10 +366,3 @@ h2{
   text-align: center;
 }
 
-/* .centro-formulario{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background-color: #eef2f6;
-} */
