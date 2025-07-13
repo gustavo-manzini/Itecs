@@ -69,19 +69,27 @@ const Slider = () => {
             <polyline points="15 18 9 12 15 6" />
           </svg>
         </button>
-        <div className="slider-dots">
-          {slideData.map((_, index) => (
-            <button
-              key={index}
-              className={`dot ${index === current ? "active" : ""}`}
-              onClick={() => goToSlide(index)}
-              aria-label={`Go to slide ${index + 1}`}
-            ></button>
-          ))}
-        </div>
-     <button onClick={nextSlide} aria-label="Next Slide">
-  <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="9 6 15 12 9 18"/></svg>
-</button>
+        <button onClick={nextSlide} aria-label="Next Slide">
+          <svg
+            width="24"
+            height="24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="3"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <polyline points="9 6 15 12 9 18" />
+          </svg>
+        </button>
+      </div>
+      <div className="slider-progress">
+        <div
+          className="slider-progress-bar"
+          style={{
+            width: `${((current + 1) / total) * 100}%`,
+          }}
+        ></div>
       </div>
     </div>
   );

@@ -458,6 +458,32 @@ h2{
   box-shadow: 0 1px 4px rgba(0,112,243,0.10);
 }
 
+.slider-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin: 1.5rem 0 0 0;
+}
+
+/* Barra de progreso sutil debajo de los botones */
+.slider-progress {
+  width: 120px;
+  height: 4px;
+  background: rgba(0,0,0,0.08);
+  border-radius: 2px;
+  margin: 0.5rem auto 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.slider-progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #00bfff 0%, #0070f3 100%);
+  border-radius: 2px;
+  transition: width 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
 .slider-dots {
   display: flex;
   gap: 0.5rem;
