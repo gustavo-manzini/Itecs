@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../App.css";
 
-const slides = [
+const slideData = [
   {
     text1: "Tu iPhone favorito, al mejor precio",
     title: (
@@ -26,28 +26,61 @@ const slides = [
   }
 ];
 
-function Home() {
+const Slider = () => {
   const [current, setCurrent] = useState(0);
-  const total = slides.length;
+  const total = slideData.length;
 
   const nextSlide = () => setCurrent((prev) => (prev + 1) % total);
   const prevSlide = () => setCurrent((prev) => (prev - 1 + total) % total);
+  const goToSlide = (index) => setCurrent(index);
 
   return (
-    <section className="hero-section">
-      <div>
-        <p>{slides[current].text1}</p>
-        <h1>{slides[current].title}</h1>
-        <p>{slides[current].text2}</p>
-        <button className="cta-button">Comprar ahora</button>
-        <div className="slider-btn" style={{ marginTop: "1rem" }}>
-          <button onClick={prevSlide} className="slider-btn">&#8592;</button>
-          <button onClick={nextSlide} className="slider-btn">&#8594;</button>
+    <div className="slider-container">
+      <div
+        className="slider-content"
+        style={{ transform: `translateX(-${current * 100}%)` }}
+      >
+        {slideData.map((slide, index) => (
+          <div className="slide" key={index}>
+            <div className="slide-text">
+              <p>{slide.text1}</p>
+              <h1>{slide.title}</h1>
+              <p>{slide.text2}</p>
+              <button className="cta-button">Comprar ahora</button>
+            </div>
+            <div className="slide-image">
+              <img src={slide.img} alt={slide.alt} />
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div className="slider-controls">
+        <button onClick={prevSlide} aria-label="Previous Slide">
+          &#8592;
+        </button>
+        <div className="slider-dots">
+          {slideData.map((_, index) => (
+            <button
+              key={index}
+              className={`dot ${index === current ? "active" : ""}`}
+              onClick={() => goToSlide(index)}
+              aria-label={`Go to slide ${index + 1}`}
+            ></button>
+          ))}
         </div>
+        <button onClick={nextSlide} aria-label="Next Slide">
+          &#8594;
+        </button>
       </div>
-      <div className="imagen">
-        <img src={slides[current].img} alt={slides[current].alt} />
-      </div>
+    </div>
+  );
+};
+
+function Home() {
+  return (
+    <section className="hero-section">
+      <Slider />
     </section>
   );
 }
