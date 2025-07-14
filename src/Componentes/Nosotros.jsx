@@ -15,6 +15,14 @@ const Nosotros = () => {
         <section className="mensaje">
             <p>No dejes que tu dispositivo roto <br />te haga pasar un mal día</p>
         </section>
+        <section className="estadisticas">
+            <div className="numero">100+</div>
+            <p>reparaciones por mes</p>
+            <div className="numero">3.000+</div>
+            <p>clientes felices</p>
+            <div className="numero">100%</div>
+            <p>⭐⭐⭐⭐⭐</p>
+        </section>
 
  <section className="descripcion">
   <div className="descripcion-container">
