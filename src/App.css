@@ -10,14 +10,17 @@ body {
 
 /* Navbar */
 .navbar {
-  background-color: #41454c;
+  background-color: #0c4266;
   color: white;
   padding: 15px 30px;
   height: 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  top: 0;
+  z-index: 1000;
   position: sticky;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 /* Logo */
@@ -110,7 +113,7 @@ body {
     top: 60px;
     left: 0;
     right: 0;
-    background-color: #41454c;
+    background-color: #0c4266;
     padding: 0;
     gap: 20px;
     z-index: 10;
@@ -712,7 +715,7 @@ h2{
   color: #b0b0b0;
   font-size: 1rem;
   grid-column: 1 / -1;
-  text-align: center;
+  text-align: centenavbarr;
   padding: 18px 0 10px 0;
 }
 @media (max-width: 700px) {
