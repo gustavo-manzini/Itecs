@@ -5,7 +5,6 @@ const Nosotros = () => {
         <>
         <section className="hero">
             <div className="container">
-                <p className="breadcrumb">INICIO / NOSOTROS</p>
                 <h1 className="title">Nosotros</h1>
                 <img src="/local/loca.webp" alt="local" 
                 className="hero-img"/>
@@ -21,7 +20,7 @@ const Nosotros = () => {
             <div className="numero">3.000+</div>
             <p>clientes felices</p>
             <div className="numero">100%</div>
-            <p>⭐⭐⭐⭐⭐</p>
+            <p>⭐⭐⭐⭐⭐npm</p>
         </section>
 
  <section className="descripcion">
