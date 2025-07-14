@@ -731,3 +731,64 @@ h2{
     gap: 12px 0;
   }
 }
+
+/* nosotros */
+
+.hero{
+  background-color: #0c4266;
+  padding: 100px 0 60px;
+  text-align: center;
+}
+
+.container{
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+.breadcrumb{
+  font-size: 0.8rem;
+  color: white;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+.title{
+  font-size: 3rem;
+  color: white;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+.hero-img{
+  width: 100%;
+  border-radius: 1rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  display: block;
+  margin: 0 auto;
+}
+
+.mensaje{
+  background-color: white;
+  padding: 60px 20px;
+  text-align: center;
+}
+.mensaje p {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #111518;
+}
+.descripcion{
+  padding: 25px 20px;
+  text-align: center;
+}
+.descripcion-container{
+  max-width: 800px;
+  margin: 0 auto;
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+.titulo-testimonios{
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 60px 0 40px;
+}
