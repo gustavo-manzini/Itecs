@@ -823,3 +823,96 @@ h2{
   font-weight: bold;
   color: #000;
 }
+/* footer */
+.footer {
+  background-color: #193657;
+  color: #fff;
+  padding: 60px 30px 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.newsletter {
+  text-align: center;
+  margin-bottom: 60px;
+  
+}
+
+.newsletter h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.newsletter form {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.newsletter input {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  width: 250px;
+  background-color: rgb(255, 255, 255);
+}
+.newsletter p{
+  color: #999;
+}
+
+.newsletter button {
+  padding: 10px 20px;
+  background-color: #6c4cf1;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 10px;
+  font-style: bold;
+  font-weight: 700;
+}
+
+.footer-columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  gap: 30px;
+}
+
+.footer-about {
+  max-width: 250px;
+}
+
+.footer-about .brand {
+  color: #00baff;
+}
+
+.footer-column h4 {
+  font-size: 1rem;
+  border-bottom: 1px solid #fff;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column li {
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+.footer-column li:hover{
+  color: #0070f3;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #999;
+}
+
