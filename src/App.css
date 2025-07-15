@@ -6,6 +6,7 @@ body {
   align-items: center;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   overflow-x: hidden;
+  
 }
 
 /* Navbar */
@@ -916,3 +917,47 @@ h2{
   color: #999;
 }
 
+/* contacto */
+
+.contact-container {
+   background-color: #6c6c6c; 
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.contact-header {
+  margin-bottom: 30px;
+}
+
+.contact-header h2 {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.contact-header nav a {
+  color: white;
+  text-decoration: none;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  box-shadow: black;
+}
+
+.info-item {
+  background-color: white;
+  color: #1a1a1a;
+  padding: 20px;
+  border-radius: 8px;
+  width: 250px;
+  text-align: left;
+}
+
+.icon {
+  font-size: 24px;
+  margin-right: 10px;
+}
