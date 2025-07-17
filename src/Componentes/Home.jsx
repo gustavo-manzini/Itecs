@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "../App.css";
+import Categorias from "./Categorias";
+
 
 const slideData = [
   {
@@ -97,15 +99,19 @@ const Slider = () => {
 
 function Home() {
   return (
-    <div>
-      {/* Sección del slider */}
+    <>     {/* Sección del slider */}
       <section className="hero-section">
         <Slider />
       </section>
 
-   
+           {/* Sección de categorías justo después */}
+      <section className="categorias-section">
+        <Categorias />
+      </section>
+</>
   );
 }
+
 
 
 export default Home;
