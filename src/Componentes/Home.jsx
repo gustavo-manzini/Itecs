@@ -97,10 +97,15 @@ const Slider = () => {
 
 function Home() {
   return (
-    <section className="hero-section">
-      <Slider />
-    </section>
+    <div>
+      {/* Sección del slider */}
+      <section className="hero-section">
+        <Slider />
+      </section>
+
+   
   );
 }
+
 
 export default Home;

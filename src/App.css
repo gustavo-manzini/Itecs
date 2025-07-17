@@ -6,6 +6,7 @@ body {
   align-items: center;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   overflow-x: hidden;
+  background-color: #0c4266;
   
 }
 
@@ -960,4 +961,34 @@ h2{
 .icon {
   font-size: 24px;
   margin-right: 10px;
+}
+
+
+.home-container {
+  text-align: center;
+}
+
+.categories {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.category {
+  flex: 1;
+  margin: 10px;
+}
+
+.category img {
+  max-width: 100%;
+  height: auto;
+}
+
+.computadoras{
+  display: flex;
+  width: 450px;
+  height: 450px;
+}
+.computadoras h2{
+  text-align: right;
 }
