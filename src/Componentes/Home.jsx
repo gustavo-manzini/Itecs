@@ -21,7 +21,7 @@ const slideData = [
       </>
     ),
     text2: "Ahorra y cuida el planeta",
-    img: "/16promax/cameracontrol.jpeg",
+    img: "/public/home/Macbookpro.png",
     alt: "MacBook Pro",
   },
 ];

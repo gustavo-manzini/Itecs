@@ -9,6 +9,7 @@ import Tienda from "./Componentes/Tienda";
 import Nosotros from "./Componentes/Nosotros";
 import Contacto from "./Componentes/Contacto";
 import ServicioTecnico from "./Componentes/Serviciotecnico";
+import Footer from "./Componentes/Footer";
 
 function App() {
   return (
@@ -21,6 +22,8 @@ function App() {
         <Route path="/nosotros" element={<Nosotros />} />
         <Route path="/contacto" element={<Contacto />} />
       </Routes>
+
+      <Footer />
     </BrowserRouter>
   );
 }
