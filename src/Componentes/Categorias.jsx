@@ -4,19 +4,19 @@ import React from "react";
 const categorias = [
   {
     titulo: "informatica",
-    imagen: "/home/Informatica.webp",
+    imagen: "/home/Informatica.png",
   },
   {
     titulo: "Computadoras",
-    imagen: "/home/computadoras.webp",
+    imagen: "/home/computadoras.png",
   },
   {
     titulo: "Accesorios",
-    imagen: "/home/accesorios.jpg",
+    imagen: "/home/accesorios.png",
   },
   {
     titulo: "celulares",
-    imagen: "/imagenes/iphone16.jpeg",
+    imagen: "/home/iphone16.jpeg",
   },
 ];
 

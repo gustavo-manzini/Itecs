@@ -1016,17 +1016,17 @@ h2{
 
 /* Hover diferente para cada una */
 .categoria-card.hover-1:hover {
-  background-color: #fce4ec; /* Rosa claro */
+  background-color: #1e1e1e;
 }
 
 .categoria-card.hover-2:hover {
-  background-color: #e3f2fd; /* Azul claro */
+  background-color: yellow;
 }
 
 .categoria-card.hover-3:hover {
-  background-color: #e8f5e9; /* Verde claro */
+  background-color: rgb(88, 62, 105); 
 }
 
 .categoria-card.hover-4:hover {
-  background-color: #fff3e0; /* Naranja claro */
+  background-color: rgb(116, 241, 158); 
 }
