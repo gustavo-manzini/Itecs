@@ -6,7 +6,7 @@ body {
   align-items: center;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   overflow-x: hidden;
-  background-color: #0c4266;
+  /* background-color: #0c4266; */
   
 }
 
@@ -1029,4 +1029,54 @@ h2{
 
 .categoria-card.hover-4:hover {
   background-color: rgb(116, 241, 158); 
+}
+
+/* tienda filtro */
+
+.precio-range {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.precio-range input {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.tienda-container {
+  display: flex;
+  padding: 20px;
+}
+
+.filtro-tienda {
+  width: 200px;
+  padding-right: 20px;
+}
+
+.filtro-tienda h3 {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.filtro-tienda label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+
+.productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  flex: 1;
+}
+
+.producto-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
 }
