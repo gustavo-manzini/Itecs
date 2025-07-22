@@ -1112,13 +1112,17 @@ h2{
 .form-container {
   flex: 1;
   display: flex;
-  flex-direction: column;
+  justify-content: flex-end;
+  margin-right: 400px;
+
 }
 
 .form-container h2 {
   font-weight: 700;
   font-size: 1.8rem;
   margin-bottom: 0.5rem;
+  justify-content: flex-end;
+  display: flex;
 }
 
 .form-container p {
@@ -1198,12 +1202,9 @@ button:hover {
   }
 }
 
-
-.map-section{
-  display: grid;
-  align-items: center;
-  justify-content: start;
-  height: 300px;
-  border: 1px solid #ccc;
-  
+.google-map{
+  display: flex;
+  justify-content: flex-start;
+width: 650px;
+border-radius: 10px;
 }
