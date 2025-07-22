@@ -1,5 +1,4 @@
 import GoogleReviews from "../GoogleReviews";
-import MapaContacto from "./MapaContacto";
 
 const Nosotros = () => {
     return(
