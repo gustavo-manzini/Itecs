@@ -1011,8 +1011,25 @@ h2{
 .categoria-titulo {
   padding: 15px;
   font-size: 1.1rem;
-  color: #333;
+  color: black;
+  font-weight: bold;
 }
+
+.categoria-card:hover .categoria-titulo {
+  color: white;
+}
+
+.hover-1:hover {
+  background-color: #007aff;
+}
+.hover-2:hover {
+  background-color: #4caf50;
+}
+.hover-3:hover {
+  background-color: #f44336;
+}
+/* ... */
+
 
 /* Hover diferente para cada una */
 .categoria-card.hover-1:hover {

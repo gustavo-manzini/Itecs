@@ -1,5 +1,3 @@
-import React from "react";
-
 
 const categorias = [
   {
@@ -23,7 +21,6 @@ const categorias = [
 const Categorias = () => {
   return (
     <section className="categorias-section">
-      <h2>Categorías de Productos</h2>
       <div className="categorias-container">
         {categorias.map((cat, index) => (
           <div className={`categoria-card hover-${index + 1}`} key={index}>
