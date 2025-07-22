@@ -22,7 +22,6 @@ import iphonex from "/public/imagenes/iphonex.jpeg";
  import iphone14 from "/public/imagenes/iphone14.jpeg";
  import iphone13promax from "/public/imagenes/iphone13promax.jpeg";
  import iphone13pro from "/public/imagenes/iphone13pro.jpeg";
-
  import iphone13 from "/public/imagenes/iphone13.jpeg";
  import iphone13mini from "/public/imagenes/iphone13mini.jpeg";
  import iphone12promax from "/public/imagenes/iphone12promax.jpeg";
@@ -210,7 +209,7 @@ export default function DeviceSelector() {
         {!selectedBrand ? (
           <>
             <p className="subtitle">
-              O selecciona tu <b>marca</b>
+              O selecciona tu <b>tipo</b>
             </p>
             <div className="brands-grid">
               {filteredBrands.map((brand) => (

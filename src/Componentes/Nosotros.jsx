@@ -1,4 +1,5 @@
 import GoogleReviews from "../GoogleReviews";
+import MapaContacto from "./MapaContacto";
 
 const Nosotros = () => {
     return(
@@ -6,7 +7,7 @@ const Nosotros = () => {
         <section className="hero">
             <div className="container">
                 <h1 className="title">Nosotros</h1>
-                <img src="/local/loca.webp" alt="local" 
+                <img src="/local/local.jpg" alt="local" 
                 className="hero-img"/>
             </div>
         </section>
@@ -48,8 +49,11 @@ const Nosotros = () => {
 
 <h2 className="titulo-testimonios">Lo que dicen nuestros clientes</h2>
 <GoogleReviews />
+
+
         </>
     );
+    s
 };
 
 export default Nosotros;
