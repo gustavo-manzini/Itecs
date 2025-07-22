@@ -1,10 +1,10 @@
 import React from 'react';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
-import './fixLeafletIcons'; // Ajustá el path según tu estructura
+import './fixLeafletIcons'; 
 
 const Contacto = () => {
-  const position = [-34.9011, -56.1645]; // Coordenadas Montevideo
+  const position = [-34.9011, -56.1645]; 
 
   return (
     <div className="contact-container">
