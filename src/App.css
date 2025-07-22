@@ -1017,6 +1017,7 @@ h2{
   font-size: 1.1rem;
   color: black;
   font-weight: bold;
+  transition: color 0.3s ease;
 }
 
 
@@ -1027,7 +1028,7 @@ h2{
 }
 
 .categoria-card.hover-2:hover {
-  background-color: yellow;
+  background-color: rgb(133, 133, 27);
 }
 
 .categoria-card.hover-3:hover {
