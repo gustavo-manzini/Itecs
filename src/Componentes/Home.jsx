@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../App.css";
 import Categorias from "./Categorias";
-
+import Reparaciones from "./Reparaciones";
 
 const slideData = [
   {
@@ -104,6 +104,10 @@ function Home() {
         <Slider />
       </section>
 
+      {/* Seccion reparacion */}
+      <section className="reparacion-section">
+        <Reparaciones />
+      </section>
            {/* Sección de categorías justo después */}
       <section className="categorias-section">
         <Categorias />

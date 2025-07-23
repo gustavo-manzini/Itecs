@@ -1228,3 +1228,42 @@ border-radius: 10px;
   gap: 10px;
   margin-left: 850px;
 }
+
+/* reparaciones */
+.reparaciones-carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.carousel-slide {
+  display: flex;
+  gap: 2rem;
+}
+
+.reparacion-card {
+  text-align: center;
+}
+
+.reparacion-card img {
+  width: 200px;
+  height: auto;
+  object-fit: contain;
+}
+
+.carousel-btn {
+  background-color: transparent;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.carousel-btn.left {
+  margin-right: 1rem;
+}
+
+.carousel-btn.right {
+  margin-left: 1rem;
+}
