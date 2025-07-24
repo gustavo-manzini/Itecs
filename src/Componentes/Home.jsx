@@ -5,6 +5,23 @@ import Reparaciones from "./Reparaciones";
 
 const slideData = [
   {
+    text1: "Reparacion de moviles",
+    title: (
+      <>
+      Reparacion de moviles en Montevideo uruguay
+      </>
+    ),
+    text2: "Reparación rápida y confiable de dispositivos móviles",
+    img: "/public/home/iphone-moviles.webp",
+    alt: "Reparación de móviles",
+    buttons: (
+      <>
+         <button className="cta-button">Llamar</button>
+              <button className="cta-button">Whatsapp</button>
+      </>
+    )
+  },
+  {
     text1: "Tu iPhone favorito, al mejor precio",
     title: (
       <>
@@ -14,6 +31,11 @@ const slideData = [
     text2: "Más sostenible, más inteligente, más económico",
     img: "/public/home/iphone16.webp",
     alt: "Iphone 16",
+    buttons: (
+      <>
+      <button className="cta-button">Comprar</button>
+      </>
+    )
   },
   {
     text1: "MacBook Pro como nuevo",
@@ -25,6 +47,11 @@ const slideData = [
     text2: "Ahorra y cuida el planeta",
     img: "/public/home/Macbookpro.png",
     alt: "MacBook Pro",
+    buttons: (
+      <>
+      <button className="cta-button">Comprar</button>
+      </>
+    )
   },
 ];
 
@@ -48,7 +75,7 @@ const Slider = () => {
               <p>{slide.text1}</p>
               <h1>{slide.title}</h1>
               <p>{slide.text2}</p>
-              <button className="cta-button">Comprar ahora</button>
+              {slide.buttons}
             </div>
             <div className="slide-image">
               <img src={slide.img} alt={slide.alt} />

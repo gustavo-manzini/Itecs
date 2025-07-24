@@ -214,6 +214,8 @@ a {
   border-radius: 0.5rem;
   margin-top: 1.5rem;
   cursor: pointer;
+  margin: 3px;
+  
 }
 .cta-button:hover {
   background-color: #005bb5;
