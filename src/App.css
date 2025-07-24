@@ -1289,3 +1289,8 @@ border-radius: 10px;
 .reparacion-section h2{
   text-align: center;
 }
+
+.categoria-ordenes{
+  color: white;
+  background-color: white;
+}
