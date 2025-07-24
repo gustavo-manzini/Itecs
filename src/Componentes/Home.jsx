@@ -106,6 +106,7 @@ function Home() {
 
       {/* Seccion reparacion */}
       <section className="reparacion-section">
+        <h2>¿Qué necesitas reparar?</h2>
         <Reparaciones />
       </section>
            {/* Sección de categorías justo después */}

@@ -1267,3 +1267,9 @@ border-radius: 10px;
 .carousel-btn.right {
   margin-left: 1rem;
 }
+.reparacion-section{
+  background-color: white;
+}
+.reparacion-section h2{
+  text-align: center;
+}

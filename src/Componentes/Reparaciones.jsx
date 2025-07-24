@@ -7,12 +7,14 @@ const reparaciones = [
   },
   {
     titulo: "Laptops",
-    imagen: "/public/reparaciones/laptop.png",
+    imagen: "/public/reparacion/laptop.png",
   },
   {
     titulo: "SmartWatches",
-    imagen: "/public/reparaciones/",
+    imagen: "/public/reparacion/smartwatches.png",
   },
+
+
 ];
 
 const ReparacionesCarousel = () => {
