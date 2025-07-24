@@ -1,37 +1,69 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
+import brokenPhone from "/public/celroto.webp"; 
+const OrderCheck = () => {
+  const [showModal, setShowModal] = useState(false);
+  const [orderCode, setOrderCode] = useState("");
 
-const ConsultOrder = () => {
-  const [code, setCode] = useState('');
-
-  const handleInputChange = (event) => {
-    setCode(event.target.value);
+  const handleCheck = () => {
+    setShowModal(true);
   };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    // Aquí puedes agregar la lógica para consultar la orden
-    console.log('Código ingresado:', code);
+  const closeModal = () => {
+    setShowModal(false);
+    setOrderCode("");
+  };
+
+  const handleSubmit = () => {
+    // Aquí iría la lógica para consultar la orden
+    alert('Consultando orden con código: ${orderCode}');
   };
 
   return (
-    <div className="consult-order-container">
-      <h1>Consultar Orden</h1>
-      <p>
-        ¿Tienes un equipo en nuestro servicio técnico y quieres hacerle seguimiento? 
-        Ingresa el código brindado en la orden impresa y seguí todos los detalles.
-      </p>
-      <form onSubmit={handleSubmit}>
-        <input 
-          type="text" 
-          value={code} 
-          onChange={handleInputChange} 
-          placeholder="Ingresa tu código" 
-          required
-        />
-        <button type="submit">CONSULTAR</button>
-      </form>
-    </div>
+    <>
+      <section className="order-section">
+        <div className="order-content">
+          <div className="order-text">
+            <h2>Consultar Orden</h2>
+            <p>
+              ¿Tenés un equipo en nuestro servicio técnico y querés hacerle
+              seguimiento? Ingresá el código brindado en la orden impresa y
+              seguí todos los detalles.
+            </p>
+            <button className="order-button" onClick={handleCheck}>
+              CONSULTAR
+            </button>
+          </div>
+          <div className="order-image">
+            <img src={brokenPhone} alt="Teléfonos rotos" />
+            
+          </div>
+        </div>
+      </section>
+
+      {showModal && (
+        <div className="modal-overlay">
+          <div className="modal">
+            <button className="close-button" onClick={closeModal}>
+              &times;
+            </button>
+            <h3>Consulta de orden online</h3>
+            <p>
+              Mediante este formulario podrás consultar el estado de tu orden de
+              trabajo. Solo ingresa el código que se encuentra en la orden
+              entregada por la empresa.
+            </p>
+            <input
+              type="text"
+              placeholder="Inserte su código..."
+              value={orderCode}
+              onChange={(e) => setOrderCode(e.target.value)}
+            />
+            <button onClick={handleSubmit}>Consultar orden</button>
+          </div>
+        </div>
+      )}
+    </>
   );
 };
 
-export default ConsultOrder;
+export default OrderCheck;

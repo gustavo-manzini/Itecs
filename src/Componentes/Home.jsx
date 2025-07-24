@@ -3,7 +3,8 @@ import "../App.css";
 import Categorias from "./Categorias";
 import Reparaciones from "./Reparaciones";
 import Ordenes from "./Consultarordenes"
-import CardConsultarOrden from "./Consultarordenes";
+
+
 const slideData = [
   {
     text1: "Reparacion de moviles",
@@ -141,10 +142,9 @@ function Home() {
       <section className="categorias-section">
         <Categorias />
       </section>
-      <section className="categoria-ordenes">
-      <CardConsultarOrden
-    
-      />
+      {/* Sección de consultar ordenes */}
+      <section className="consultar-ordenes-section">
+        <Ordenes />
       </section>
 </>
   );
