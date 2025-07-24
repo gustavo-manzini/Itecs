@@ -1,6 +1,5 @@
-// src/components/Navbar.jsx
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { FiSearch, FiUser, FiShoppingBag, FiMenu, FiX } from "react-icons/fi";
 
 function Navbar() {
@@ -8,39 +7,32 @@ function Navbar() {
 
   return (
     <nav className="navbar">
-      <Link to="/" className="navbar-logo">
-        <span className="logo-it">It</span>
-        <span className="logo-itecs">itecs</span>
-      </Link>
+  <div className="navbar-container">
+    <Link to="/" className="navbar-logo">
+      <span className="logo-it">It</span>
+      <span className="logo-itecs">itecs</span>
+    </Link>
 
-      <div className="navbar-menu-icon" onClick={() => setMenuOpen(!menuOpen)}>
-        {menuOpen ? <FiX /> : <FiMenu />}
-      </div>
+    <div className="navbar-menu-icon" onClick={() => setMenuOpen(!menuOpen)}>
+      {menuOpen ? <FiX /> : <FiMenu />}
+    </div>
 
-      <ul className={`navbar-links${menuOpen ? " open" : ""}`}>
-        <li>
-          <Link to="/">Inicio</Link>
-        </li>
-        <li>
-          <Link to="/servicio-tecnico">Servicio Técnico</Link>
-        </li>
-        <li>
-          <Link to="/tienda">Tienda</Link>
-        </li>
-        <li>
-          <Link to="/nosotros">Nosotros</Link>
-        </li>
-        <li>
-          <Link to="/contacto">Contacto</Link>
-        </li>
-      </ul>
+    <ul className={`navbar-links${menuOpen ? " open" : ""}`}>
+      <li><NavLink to="/" end>Inicio</NavLink></li>
+      <li><NavLink to="/servicio-tecnico">Servicio Técnico</NavLink></li>
+      <li><NavLink to="/tienda">Tienda</NavLink></li>
+      <li><NavLink to="/nosotros">Nosotros</NavLink></li>
+      <li><NavLink to="/contacto">Contacto</NavLink></li>
+    </ul>
 
-      <div className="navbar-icons">
-        <FiSearch className="icon" />
-        <FiUser className="icon" />
-        <FiShoppingBag className="icon" />
-      </div>
-    </nav>
+    <div className="navbar-icons">
+      <FiSearch className="icon" />
+      <FiUser className="icon" />
+      <FiShoppingBag className="icon" />
+    </div>
+  </div>
+</nav>
+
   );
 }
 
