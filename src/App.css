@@ -18,6 +18,7 @@ body {
   background-color: #0c4266;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   padding: 12px 0;
+  
 }
 
 .navbar-container {
@@ -1246,51 +1247,40 @@ border-radius: 10px;
 }
 
 /* reparaciones */
-.reparaciones-carousel {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  padding: 2rem;
-}
-
-.carousel-slide {
-  display: flex;
-  gap: 2rem;
-}
-
-.reparacion-card {
-  text-align: center;
-}
-
-.reparacion-card img {
-  width: 200px;
-  height: auto;
-  object-fit: contain;
-}
-
-.carousel-btn {
-  background-color: transparent;
-  border: none;
-  font-size: 2rem;
-  cursor: pointer;
-}
-
-.carousel-btn.left {
-  margin-right: 1rem;
-}
-
-.carousel-btn.right {
-  margin-left: 1rem;
-}
-.reparacion-section{
-  background-color: white;
-}
-.reparacion-section h2{
-  text-align: center;
-}
-
-.categoria-ordenes{
+.consult-order-container {
+  background: linear-gradient(135deg, #5c6bc0, #1e88e5);
   color: white;
-  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 1200px;
+  height: 300px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+p {
+  font-size: 16px;
+}
+
+input {
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  width: calc(100% - 22px);
+}
+
+button {
+  padding: 10px;
+  background-color: #7e57c2;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
 }

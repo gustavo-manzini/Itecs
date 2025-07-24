@@ -143,12 +143,7 @@ function Home() {
       </section>
       <section className="categoria-ordenes">
       <CardConsultarOrden
-      title="Consulta Orden"
-      description="TIenes un equipo en nuestro servicio tecnico? Consulta el estado de tu orden"
-      buttonText="CONSULTAR"
-      onButtonClick={() => alert("Consultando...")}
-      imageSrc="/public/home/orden.webp"
-      imageAlt="Telefono roto"
+    
       />
       </section>
 </>
