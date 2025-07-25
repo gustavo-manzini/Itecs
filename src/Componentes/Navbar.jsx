@@ -7,32 +7,51 @@ function Navbar() {
 
   return (
     <nav className="navbar">
-  <div className="navbar-container">
-    <Link to="/" className="navbar-logo">
-      <span className="logo-it">It</span>
-      <span className="logo-itecs">itecs</span>
-    </Link>
+      <div className="navbar-container">
+        <Link to="/" className="navbar-logo">
+          <img
+            src="/public/logo/logo.webp"
+            alt="Logo "
+            className="logo-itecs"
+          />
+          {/* <span className="logo-it">It</span>
+      <span className="logo-itecs">itecs</span> */}
+        </Link>
 
-    <div className="navbar-menu-icon" onClick={() => setMenuOpen(!menuOpen)}>
-      {menuOpen ? <FiX /> : <FiMenu />}
-    </div>
+        <div
+          className="navbar-menu-icon"
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          {menuOpen ? <FiX /> : <FiMenu />}
+        </div>
 
-    <ul className={`navbar-links${menuOpen ? " open" : ""}`}>
-      <li><NavLink to="/" end>Inicio</NavLink></li>
-      <li><NavLink to="/servicio-tecnico">Servicio Técnico</NavLink></li>
-      <li><NavLink to="/tienda">Tienda</NavLink></li>
-      <li><NavLink to="/nosotros">Nosotros</NavLink></li>
-      <li><NavLink to="/contacto">Contacto</NavLink></li>
-    </ul>
+        <ul className={`navbar-links${menuOpen ? " open" : ""}`}>
+          <li>
+            <NavLink to="/" end>
+              Inicio
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/servicio-tecnico">Servicio Técnico</NavLink>
+          </li>
+          <li>
+            <NavLink to="/tienda">Tienda</NavLink>
+          </li>
+          <li>
+            <NavLink to="/nosotros">Nosotros</NavLink>
+          </li>
+          <li>
+            <NavLink to="/contacto">Contacto</NavLink>
+          </li>
+        </ul>
 
-    <div className="navbar-icons">
-      <FiSearch className="icon" />
-      <FiUser className="icon" />
-      <FiShoppingBag className="icon" />
-    </div>
-  </div>
-</nav>
-
+        <div className="navbar-icons">
+          <FiSearch className="icon" />
+          <FiUser className="icon" />
+          <FiShoppingBag className="icon" />
+        </div>
+      </div>
+    </nav>
   );
 }
 

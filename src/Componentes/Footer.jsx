@@ -1,19 +1,26 @@
-import React from 'react';
+import React from "react";
 
 const Footer = () => {
   return (
     <footer className="footer">
       <div className="newsletter">
         <h2>Subscribite a nuestro Newsletter</h2>
-        <form className='newsletter-form'>
-          <input className='input-news' type="email" placeholder="Dirección de Email*" required />
-          <button className='newsletter-btn' type="submit">SUBSCRIBIRSE</button>
+        <form className="newsletter-form">
+          <input
+            className="input-news"
+            type="email"
+            placeholder="Dirección de Email*"
+            required
+          />
+          <button className="newsletter-btn" type="submit">
+            SUBSCRIBIRSE
+          </button>
         </form>
       </div>
 
       <div className="footer-columns">
         <div className="footer-about">
-          <h3><span className="brand">it</span>ecs</h3>
+          <img src="/public/logo/logo.webp" className="brand" alt="logo" />
           <p>
             Creado por un equipo de técnicos certificados con más de 10 años de
             experiencia reparando celulares, tablets y computadoras.
@@ -51,7 +58,10 @@ const Footer = () => {
       </div>
 
       <div className="footer-bottom">
-        <p>Copyright © 2025 - Todos los derechos reservados - ITECS Soluciones SAS</p>
+        <p>
+          Copyright © 2025 - Todos los derechos reservados - ITECS Soluciones
+          SAS
+        </p>
       </div>
     </footer>
   );
