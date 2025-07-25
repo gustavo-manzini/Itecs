@@ -44,17 +44,6 @@ body {
   max-width: 90px;
 }
 
-/* .logo-it {
-  color: #00bfff;
-  font-size: 40px;
-  cursor: pointer;
-}
-
-.logo-itecs {
-  color: rgb(230, 230, 230);
-  margin-left: 4px;
-} */
-
 .navbar-logo:hover {
   color: #00bfff;
   transform: translateY(-3px);
@@ -391,7 +380,7 @@ h2 {
 .slider-container {
   width: 100%;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: auto;
   background: rgba(255, 255, 255, 0.25);
   border-radius: 2rem;
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
@@ -401,6 +390,7 @@ h2 {
   overflow: hidden;
   padding: 0;
   position: relative;
+  overflow: hidden;
 }
 
 .slider-content {
@@ -410,18 +400,18 @@ h2 {
 }
 
 .slide {
-  min-width: 100%;
   display: flex;
+  flex: 0 0 100%;
   align-items: center;
   justify-content: space-between;
-  padding: 3rem 4rem;
+  padding: 2rem;
+  min-width: 100%;
   box-sizing: border-box;
-  gap: 2rem;
 }
 
 .slide-text {
   flex: 1;
-  min-width: 300px;
+  padding-right: 2rem;
 }
 
 .slide-text h1 {
@@ -443,15 +433,20 @@ h2 {
 }
 
 .slide-image img {
-  max-width: 400px;
-  width: 100%;
+  max-width: 100%;
+  max-width: 500px;
+  height: auto;
+  object-fit: contain;
   border-radius: 1.5rem;
   box-shadow: 0 2px 16px rgba(0, 0, 0, 0.1);
 }
 
 /* Slider controls */
 .slider-controls > button {
-  background: linear-gradient(135deg, #00bfff 0%, #0070f3 100%);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  /* background: linear-gradient(135deg, #00bfff 0%, #0070f3 100%);
   color: #fff;
   border: none;
   border-radius: 50%;
@@ -464,7 +459,7 @@ h2 {
   transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
 }
 
 .slider-controls > button:hover {
@@ -479,20 +474,23 @@ h2 {
 }
 
 .slider-controls {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
-  margin: 1.5rem 0 0 0;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  padding: 0 1rem;
+  z-index: 10;
 }
 
 /* Barra de progreso sutil debajo de los botones */
 .slider-progress {
-  width: 120px;
-  height: 4px;
-  background: rgba(0, 0, 0, 0.08);
+  height: 5px;
+  background: #ddd;
   border-radius: 2px;
-  margin: 0.5rem auto 0 auto;
+  margin-top: 10px;
   position: relative;
   overflow: hidden;
 }
@@ -523,15 +521,14 @@ h2 {
   background: #0070f3;
 }
 
-/* Responsive */
-@media (max-width: 900px) {
+/* RESPONSIVE solo para pantallas chicas (768px o menos) */
+@media (max-width: 768px) {
   .slide {
     flex-direction: column;
-    padding: 2rem 1rem;
     text-align: center;
-  }
-  .slide-image img {
-    max-width: 90vw;
+    padding: 2rem 1rem;
+    border-radius: 30px;
+    margin: 0 1rem;
   }
 }
 
@@ -731,7 +728,7 @@ h2 {
   color: #b0b0b0;
   font-size: 1rem;
   grid-column: 1 / -1;
-  text-align: centenavbarr;
+  text-align: center;
   padding: 18px 0 10px 0;
 }
 @media (max-width: 700px) {
@@ -751,7 +748,7 @@ h2 {
 /* nosotros */
 
 .hero {
-  background-color: #0c4266;
+  background-color: #111419;
   padding: 100px 0 60px;
   text-align: center;
   margin-top: -70px;
@@ -802,7 +799,7 @@ h2 {
 .descripcion-container {
   max-width: 800px;
   margin: 0 auto;
-  color: #333;
+  color: #fff;
   font-size: 1rem;
   line-height: 1.6;
 }
@@ -811,6 +808,7 @@ h2 {
   font-size: 2rem;
   font-weight: 700;
   margin: 60px 0 40px;
+  color: whitesmoke;
 }
 .estadisticas {
   display: flex;
@@ -837,7 +835,7 @@ h2 {
   margin-top: 10px;
   font-size: 0.9rem;
   font-weight: bold;
-  color: #000;
+  color: #fff;
 }
 /* footer */
 .footer {
@@ -1409,4 +1407,16 @@ button:hover {
   font-size: 1.25rem;
   color: #555;
   cursor: pointer;
+}
+
+.elfsight-app-4c77a6f9-3bcb-49d8-8a86-bc74c2ce4249 * {
+  color: black !important;
+}
+
+.elfsight-app-4c77a6f9-3bcb-49d8-8a86-bc74c2ce4249 {
+  background-color: white !important;
+  border-radius: 15px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  color: black !important; /* para que el texto no desaparezca sobre fondo blanco */
 }
