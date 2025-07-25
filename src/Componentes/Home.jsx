@@ -2,26 +2,21 @@ import React, { useState } from "react";
 import "../App.css";
 import Categorias from "./Categorias";
 import Reparaciones from "./Reparaciones";
-import Ordenes from "./Consultarordenes"
-
+import Ordenes from "./Consultarordenes";
 
 const slideData = [
   {
     text1: "Reparacion de moviles",
-    title: (
-      <>
-      Reparacion de moviles en Montevideo uruguay
-      </>
-    ),
+    title: <>Reparacion de moviles en Montevideo uruguay</>,
     text2: "Reparación rápida y confiable de dispositivos móviles",
     img: "/public/home/iphone-moviles.webp",
     alt: "Reparación de móviles",
     buttons: (
       <>
-         <button className="cta-button">Llamar</button>
-              <button className="cta-button">Whatsapp</button>
+        <button className="cta-button">Llamar</button>
+        <button className="cta-button">Whatsapp</button>
       </>
-    )
+    ),
   },
   {
     text1: "Tu iPhone favorito, al mejor precio",
@@ -35,9 +30,9 @@ const slideData = [
     alt: "Iphone 16",
     buttons: (
       <>
-      <button className="cta-button">Comprar</button>
+        <button className="cta-button">Comprar</button>
       </>
-    )
+    ),
   },
   {
     text1: "MacBook Pro como nuevo",
@@ -51,9 +46,9 @@ const slideData = [
     alt: "MacBook Pro",
     buttons: (
       <>
-      <button className="cta-button">Comprar</button>
+        <button className="cta-button">Comprar</button>
       </>
-    )
+    ),
   },
 ];
 
@@ -128,17 +123,18 @@ const Slider = () => {
 
 function Home() {
   return (
-    <>     {/* Sección del slider */}
+    <>
+      {" "}
+      {/* Sección del slider */}
       <section className="hero-section">
         <Slider />
       </section>
-
       {/* Seccion reparacion */}
       <section className="reparacion-section">
         <h2>¿Qué necesitas reparar?</h2>
         <Reparaciones />
       </section>
-           {/* Sección de categorías justo después */}
+      {/* Sección de categorías justo después */}
       <section className="categorias-section">
         <Categorias />
       </section>
@@ -146,10 +142,8 @@ function Home() {
       <section className="consultar-ordenes-section">
         <Ordenes />
       </section>
-</>
+    </>
   );
 }
-
-
 
 export default Home;

@@ -1239,6 +1239,9 @@ button:hover {
   display: flex;
   justify-content: center;
 }
+.reparacion-card p {
+  color: white;
+}
 .order-content {
   background-color: #1a1d25;
   color: white;
@@ -1293,6 +1296,9 @@ button:hover {
   width: 100%;
   height: auto;
   object-fit: contain;
+}
+.reparacion-section h2 {
+  color: white;
 }
 
 .modal {
