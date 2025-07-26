@@ -25,6 +25,7 @@ body {
   left: 0;
   width: 100%;
   z-index: 9999;
+  
 }
 
 .navbar-container {
@@ -388,7 +389,6 @@ h2 {
   margin: auto;
   background: rgba(255, 255, 255, 0.25);
   border-radius: 2rem;
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   border: 1px solid rgba(255, 255, 255, 0.18);
@@ -396,6 +396,7 @@ h2 {
   padding: 0;
   position: relative;
   overflow: hidden;
+  margin-top: 80px;
 }
 
 .slider-content {
