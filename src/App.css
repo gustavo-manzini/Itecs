@@ -446,20 +446,6 @@ h2 {
   background: transparent;
   border: none;
   cursor: pointer;
-  /* background: linear-gradient(135deg, #00bfff 0%, #0070f3 100%);
-  color: #fff;
-  border: none;
-  border-radius: 50%;
-  width: 54px;
-  height: 54px;
-  margin: 0 12px;
-  font-size: 2rem;
-  box-shadow: 0 4px 16px rgba(0, 112, 243, 0.18);
-  cursor: pointer;
-  transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
-  display: flex;
-  align-items: center;
-  justify-content: center; */
 }
 
 .slider-controls > button:hover {
@@ -475,7 +461,7 @@ h2 {
 
 .slider-controls {
   position: absolute;
-  top: 50%;
+  top: 93%;
   left: 0;
   right: 0;
   display: flex;
