@@ -4,6 +4,9 @@ import Categorias from "./Categorias";
 import Reparaciones from "./Reparaciones";
 import Ordenes from "./Consultarordenes";
 import UltimasNoticias from "./UltimasNoticias";
+import Marcas from "./Marcas";
+
+
 const slideData = [
   {
     text1: "Reparacion de moviles",
@@ -145,6 +148,9 @@ function Home() {
       {/* ultimas noticias */}
       <section className="ultimas-noticias">
         <UltimasNoticias />
+      </section>
+      <section className="brands">
+        <Marcas />
       </section>
     </>
   );
