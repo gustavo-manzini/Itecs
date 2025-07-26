@@ -3,7 +3,7 @@ import "../App.css";
 import Categorias from "./Categorias";
 import Reparaciones from "./Reparaciones";
 import Ordenes from "./Consultarordenes";
-
+import Noticias from "./Noticias";
 const slideData = [
   {
     text1: "Reparacion de moviles",
@@ -141,6 +141,10 @@ function Home() {
       {/* Sección de consultar ordenes */}
       <section className="consultar-ordenes-section">
         <Ordenes />
+      </section>
+      {/* ultimas noticias */}
+      <section className="ultimas-noticias">
+        <Noticias />
       </section>
     </>
   );
