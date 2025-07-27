@@ -5,6 +5,7 @@ import Reparaciones from "./Reparaciones";
 import Ordenes from "./Consultarordenes";
 import UltimasNoticias from "./UltimasNoticias";
 import Marcas from "./Marcas";
+import FaqAccordion from "./FaqAccordion";
 
 
 const slideData = [
@@ -151,6 +152,9 @@ function Home() {
       </section>
       <section className="brands">
         <Marcas />
+      </section>
+      <section className="faqs">
+        <FaqAccordion />
       </section>
     </>
   );

@@ -1572,3 +1572,54 @@ button:hover {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+
+/* faqs */
+
+.faq-container {
+  background-color: #f3f3f3;
+  padding: 30px;
+  border-radius: 20px;
+  max-width: 1080px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+.faq-title {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+.faq-card {
+  background: #fff;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  padding: 15px 20px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  transition: box-shadow 0.3s ease;
+}
+
+.faq-card:hover {
+  box-shadow: 0 0 8px rgba(128, 128, 128, 0.4);
+}
+
+.faq-header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.faq-icon {
+  font-size: 1.2rem;
+}
+
+.faq-answer {
+  margin-top: 10px;
+  font-size: 0.95rem;
+  color: #333;
+  line-height: 1.4;
+}
