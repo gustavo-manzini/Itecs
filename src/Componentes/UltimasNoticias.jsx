@@ -14,6 +14,12 @@ const noticias = [
     categoria: "BLOG",
     titulo: "Como hacer un test de hardware en teléfonos Samsung",
     descripcion: "¿Tienes un celular Samsung y quieres saber si funciona correctamente?..."
+  },
+  {
+    imagen: "/public/noticias/iphone16.jpeg",
+    categoria: "TECNOLOGÍA",
+    titulo: "iPhone 17 : Todo lo que sabemos hasta ahora",
+    descripcion: "El iPhone 17 está a la vuelta de la esquina y las expectativas son altas..."
   }
 ];
 
@@ -22,7 +28,7 @@ const UltimasNoticias = () => {
     <section className="noticias-section">
       <div className="noticias-header">
         <h2>Últimas Noticias</h2>
-        <button className="noticia-blog-btn">Visitar Blog</button>
+        {/* <button className="noticia-blog-btn">Visitar Blog</button> */}
       </div>
 
       <div className="noticias-grid">
