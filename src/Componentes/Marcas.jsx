@@ -7,7 +7,6 @@ const brands = [
     { name: "Realme", img: "/public/brands/Realme.png"},
     { name: "OnePlus", img: "/public/brands/OnePlus.webp"},
     { name: "Vivo", img:"/public/brands/Vivo.webp"},
-    { name: "Poco", img: "/public/brands/Poco.webp"},
 ];
 
 const BrandSlider = () => {
