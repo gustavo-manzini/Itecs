@@ -13,8 +13,6 @@ const reparaciones = [
     titulo: "SmartWatches",
     imagen: "/public/reparacion/smartwatches.png",
   },
-
-
 ];
 
 const ReparacionesCarousel = () => {
