@@ -6,7 +6,7 @@ const Contacto = () => {
 
       </div>
 
-      <div className="contacto-tecnico-box" style={{ background: "#f7f7f7", borderRadius: "40px", padding: "48px 0", margin: "40px 0", border: "2px solid blue", maxWidth: "1200px", marginLeft: "auto", marginRight: "auto" }}>
+      <div className="contacto-tecnico-box" style={{ background: "#fff", borderRadius: "40px", padding: "48px 0", margin: "40px 0", border: "2px solid blue", maxWidth: "1200px", marginLeft: "auto", marginRight: "auto" }}>
         <h2 style={{ fontSize: "2.7rem", fontWeight: 700, color: "#181f2a", textAlign: "center", marginBottom: "18px" }}>
           ¿Necesitas hablar con un técnico?
         </h2>
