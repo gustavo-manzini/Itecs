@@ -51,12 +51,12 @@ const Contacto = () => {
           </div>
           <div className="form-container">
             <div>
-              <h2>Envíanos tu consulta</h2>
+              <h2 class="mb-4 text-center">Envíanos tu consulta</h2>
               <p>A la brevedad, uno de nuestros asesores responderá tu solicitud.</p>
               <div className="right-box">
                 <form>
                   <div className="input-row">
-                    <input type="text" placeholder="Nombre" name="nombre" />
+                    <input for="nombre" class="form-label" placeholder="nombre"/>
                     <input type="text" placeholder="Apellido" name="apellido" />
                   </div>
                   <div className="input-row">
