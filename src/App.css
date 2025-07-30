@@ -20,12 +20,6 @@ body {
   background-color: #111419;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 12px 0;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 9999;
-  
 }
 
 .navbar-container {
@@ -92,12 +86,9 @@ body {
 /* Icons */
 
 .navbar-icons {
-display: flex;
-gap: 2rem;
-align-items: flex-start;
-padding: 2rem;
-max-width: 1200px;
-margin: 0 auto;
+  display: flex;
+  gap: 1rem;
+  color: #fcfafa;
 }
 
 .icon {
@@ -150,7 +141,6 @@ margin: 0 auto;
   .navbar-menu-icon {
     display: block;
   }
-
   .hero-section {
     flex-direction: column;
     align-items: center;

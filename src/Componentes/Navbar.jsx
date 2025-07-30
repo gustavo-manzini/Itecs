@@ -14,8 +14,6 @@ function Navbar() {
             alt="Logo "
             className="logo-itecs"
           />
-          {/* <span className="logo-it">It</span>
-      <span className="logo-itecs">itecs</span> */}
         </Link>
 
         <div
