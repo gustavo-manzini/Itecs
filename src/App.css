@@ -1357,14 +1357,7 @@ display: flex;
   margin-left: 850px;
 }
 /* reparaciones carrusel */
-.reparaciones-carousel {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  width: 100%;
-  max-width: 220px;
-  box-sizing: border-box;
-}
+
 .reparacion-section h2 {
   color: white;
   text-align: center;
@@ -1373,10 +1366,13 @@ display: flex;
 .carousel-slide {
   display: flex;
   gap: 2rem;
+  justify-content: center;
 }
 
 .reparacion-card {
   text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 .reparacion-card:hover {
   transform: translateY(-1px);
