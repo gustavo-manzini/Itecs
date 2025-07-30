@@ -10,6 +10,37 @@ const Contacto = () => {
         </nav>
       </div>
 
+      <div className="contacto-tecnico-box" style={{ background: "#f7f7f7", borderRadius: "40px", padding: "48px 0", margin: "40px 0", border: "2px solid blue" }}>
+  <h2 style={{ fontSize: "2.7rem", fontWeight: 700, color: "#181f2a", textAlign: "center", marginBottom: "18px" }}>
+    ¿Necesitas hablar con un técnico?
+  </h2>
+  <p style={{ fontSize: "1.25rem", color: "#222", textAlign: "center", marginBottom: "32px" }}>
+    Sugerimos llamarnos, la forma más rápida de aclarar dudas. Somos amables, y en minutos o segundos, la respuesta que necesitas.<br />
+    ¡Esperamos tu llamada!
+  </p>
+  <div style={{ display: "flex", justifyContent: "center", alignItems: "center", gap: "32px", marginBottom: "32px" }}>
+    <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
+      <img src="/public/aron/aron.jpg" alt="Perfil técnico" style={{ width: "70px", height: "70px", borderRadius: "50%", objectFit: "cover" }} />
+      <div style={{ textAlign: "left" }}>
+        <span style={{ color: "#222", fontSize: "1.1rem" }}>Habla con</span><br />
+        <span style={{ fontWeight: 700, fontSize: "1.3rem", color: "#181f2a" }}>Aram</span>
+      </div>
+    </div>
+    <div style={{ display: "flex", gap: "18px" }}>
+      <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none" }}>
+        <button style={{ background: "#1877f2", color: "#fff", border: "none", borderRadius: "12px", padding: "12px 18px", fontSize: ".8rem", fontWeight: 600, display: "flex", alignItems: "center", gap: "8px", cursor: "pointer" }}>
+          <span style={{ fontSize: "1.3rem" }}>💬</span> Whatsapp
+        </button>
+      </a>
+      <a href="tel:+59899600819" style={{ textDecoration: "none" }}>
+        <button style={{ background: "#1877f2", color: "#fff", border: "none", borderRadius: "12px", padding: "12px 18px", fontSize: "1rem", fontWeight: 600, display: "flex", alignItems: "center", gap: "8px", cursor: "pointer" }}>
+          <span style={{ fontSize: "1.3rem" }}>📞</span> Llamar
+        </button>
+      </a>
+    </div>
+  </div>
+</div>
+
       <div className="contact-info">
         <div className="info-item">
           <span className="icon">📍</span>
