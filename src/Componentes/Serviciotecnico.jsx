@@ -1,11 +1,9 @@
 
-
-import React from "react";
 import DeviceSelector from "./DeviceSelector";
 
 function Serviciotecnico() {
   return (
-    <div>
+    <div className="main-container">
       <DeviceSelector />
     </div>
   );
