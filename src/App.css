@@ -837,9 +837,8 @@ h2 {
 }
 /* footer */
 .footer {
-  background-color: #111419;
+  background-color: #014270;
   color: #fff;
-  padding: 60px 30px 20px;
   font-family: "Segoe UI", sans-serif;
 }
 
@@ -850,7 +849,6 @@ h2 {
 
 .newsletter h2 {
   font-size: 1.8rem;
-  margin-bottom: 20px;
   color: white;
 }
 
@@ -884,12 +882,7 @@ h2 {
   font-weight: 700;
   
 }
-.footer{
-    display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100vh;
-}
+
 
 .footer-columns {
   display: flex;
@@ -1083,6 +1076,45 @@ h2 {
 
 .categoria-card.hover-4:hover {
   background-color: rgb(116, 241, 158);
+}
+
+
+/* tienda */
+
+.tienda {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: white;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+.productos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.producto {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 15px;
+  margin: 10px;
+  width: 200px;
+  text-align: center;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.producto h2 {
+  font-size: 1.2em;
+  color: #007bff;
+}
+
+.producto p {
+  margin: 5px 0;
 }
 
 /* tienda filtro */
@@ -1354,7 +1386,7 @@ display: flex;
   align-items: center;
   gap: 10px;
   width: 100%;
-
+height: auto;
 }
 
 .newsletter-btn {
