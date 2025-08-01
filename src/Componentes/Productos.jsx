@@ -1,20 +1,16 @@
 import React from "react";
 
-
 const Productos = ({ productos }) => {
   return (
-    <div className="productos">
-      {productos.length === 0 ? (
-        <p>No hay productos que coincidan con los filtros.</p>
-      ) : (
-        productos.map((producto) => (
-          <div key={producto.id} className="producto-card">
-            <h4>{producto.nombre}</h4>
-            <p>Marca: {producto.marca}</p>
-            <p>Capacidad: {producto.capacidad}</p>
-          </div>
-        ))
-      )}
+    <div className="productos-lista">
+      {productos.map((p) => (
+        <div key={p.id} className="producto-card">
+          <img src={p.image} alt={p.name} />
+          <h3>{p.name}</h3>
+          <p>{p.description}</p>
+          <p>${p.price}</p>
+        </div>
+      ))}
     </div>
   );
 };

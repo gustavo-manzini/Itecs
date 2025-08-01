@@ -1,0 +1,65 @@
+[
+    {
+        "id": 1,
+        "name": "Pantalla Iphone 11", 
+        "price": "U$S 89",
+        "image":"https://itecs.com.uy/wp-content/uploads/2021/08/pantalla-iphone11.jpg" ,
+        "description": "Pantalla original compatible con iPhone 11."
+    },
+     {
+        "id": 2,
+        "name": "Cable APple de USB-C a Magsafe 3", 
+        "price": "U$S 75",
+        "image":"https://i0.wp.com/itecs.com.uy/wp-content/uploads/2024/08/2M_1-3.png?resize=1024%2C1024&ssl=1" ,
+        "description": "El Cable Lightning a USB te permite conectar tu dispositivo con conector Lightning al puerto USB de una computadora para sincronizarlo y cargarlo. También puedes conectar tu dispositivo al adaptador de corriente USB de Apple para cargarlo desde un enchufe de pared."
+    },
+     {
+        "id": 3,
+        "name": "MAcbook Pro", 
+        "price": "U$S 549",
+        "image":"https://i0.wp.com/itecs.com.uy/wp-content/uploads/2025/05/Diseno-sin-titulo-7.jpg?resize=1024%2C1024&ssl=1" ,
+        "description": "Computadora"
+    },
+     {
+        "id": 4,
+        "name": "Iphone 13 - Azul", 
+        "price": "U$S 499",
+        "image":"https://i0.wp.com/itecs.com.uy/wp-content/uploads/2025/05/FOTO-PRINCIPAL-1-scaled.png?resize=1024%2C1024&ssl=1" ,
+        "description": "Iphone "
+    },
+     {
+        "id": 5,
+        "name": "Iphone 13 - Negro", 
+        "price": "U$S 870",
+        "image":"https://i0.wp.com/itecs.com.uy/wp-content/uploads/2025/02/iphone-13-128gb-midnight-4.png?resize=1024%2C1024&ssl=1" ,
+        "description": "Pantalla original compatible con iPhone 11."
+    },
+     {
+        "id": 6,
+        "name": "Cable APple de USB-C para Apple Watch", 
+        "price": "U$S 45",
+        "image":"https://i0.wp.com/itecs.com.uy/wp-content/uploads/2024/08/1M_1-4.png?resize=1024%2C1024&ssl=1" ,
+        "description": "Cable."
+    },
+    {
+        "id": 7,
+        "name":"Cable APple de USB-C (60w)",
+        "price":"U$S 45",
+        "image": "https://i0.wp.com/itecs.com.uy/wp-content/uploads/2024/08/1M_1-3.png?resize=1024%2C1024&ssl=1",
+        "description":"El Cable Lightning a USB te permite conectar tu dispositivo con conector Lightning al puerto USB de una computadora para sincronizarlo y cargarlo. También puedes conectar tu dispositivo al adaptador de corriente USB de Apple para cargarlo desde un enchufe de pared."
+    },
+      {
+        "id": 8,
+        "name":"Cable Apple de USB-C a Lightning",
+        "price":"U$S 45",
+        "image": "https://i0.wp.com/itecs.com.uy/wp-content/uploads/2024/08/1M_1-3.png?resize=1024%2C1024&ssl=1",
+        "description":"El Cable Lightning a USB te permite conectar tu dispositivo con conector Lightning al puerto USB de una computadora para sincronizarlo y cargarlo. También puedes conectar tu dispositivo al adaptador de corriente USB de Apple para cargarlo desde un enchufe de pared."
+    },
+      {
+        "id": 8,
+        "name":"Cable Apple de USB-C",
+        "price":"U$S 45",
+        "image": "https://i0.wp.com/itecs.com.uy/wp-content/uploads/2024/08/1M_1-3.png?resize=1024%2C1024&ssl=1",
+        "description":"El Cable Lightning a USB te permite conectar tu dispositivo con conector Lightning al puerto USB de una computadora para sincronizarlo y cargarlo. También puedes conectar tu dispositivo al adaptador de corriente USB de Apple para cargarlo desde un enchufe de pared."
+    }
+]
