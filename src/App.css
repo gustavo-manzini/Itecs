@@ -10,8 +10,7 @@ body {
   align-items: center;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   overflow-x: hidden;
-  /* background-color: #111419; */
-  background-color: red;
+  background-color: #111419;
 }
 
 @media (max-width: 768px) {
