@@ -10,7 +10,8 @@ body {
   align-items: center;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   overflow-x: hidden;
-  background-color: #111419;
+  /* background-color: #111419; */
+  background-color: red;
 }
 
 @media (max-width: 768px) {
@@ -21,10 +22,7 @@ body {
     background-color: gray;
   }
 }
-
-
 /* Navbar */  
-
 .navbar {
   width: 100%;
   background-color: #111419;
