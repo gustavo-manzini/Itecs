@@ -13,7 +13,7 @@ const slideData = [
     text1: "Reparacion de moviles",
     title: <>Reparacion de moviles en Montevideo uruguay</>,
     text2: "Reparación rápida y confiable de dispositivos móviles",
-    img: "/public/home/iphone-moviles.webp",
+    img: "public/home/iphone-moviles.webp",
     alt: "Reparación de móviles",
     buttons: (
       <>
