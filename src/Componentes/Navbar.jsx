@@ -30,7 +30,7 @@ function Navbar() {
             </NavLink>
           </li>
           <li>
-            <NavLink to="/servicio-tecnico">Servicio Técnico</NavLink>
+            <NavLink to="/servicio-tecnico">Servicio </NavLink>
           </li>
           <li>
             <NavLink to="/tienda">Tienda</NavLink>
