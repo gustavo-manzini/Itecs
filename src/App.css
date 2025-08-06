@@ -39,7 +39,6 @@ body {
   box-sizing: border-box;
 }
 /* Logo */
-
 .navbar-logo {
   font-size: 1.5rem;
   font-weight: bold;
@@ -1619,7 +1618,6 @@ height: auto;
    box-shadow: 0 0 10px rgba(128, 128, 128, 0.7),
               0 0 20px rgba(128, 128, 128, 0.5),
               0 0 30px rgba(128, 128, 128, 0.3);
-  
 }
 
 .noticia-img {
