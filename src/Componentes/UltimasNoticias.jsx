@@ -1,22 +1,21 @@
-import React from "react";
 import NoticiaCard from "./NoticiasCard";
 
 
 const noticias = [
   {
-    imagen: '/public/noticias/imagen1.webp',
+    imagen: '/noticias/imagen1.webp',
     categoria: "TECNOLOGÍA Y GADGETS",
     titulo: "3 consejos para prolongar la vida útil de los cables Apple",
     descripcion: "1. Mantén tus cables organizados. La organización adecuada de los..."
   },
   {
-    imagen: '/public/noticias/imagen2.webp',
+    imagen: '/noticias/imagen2.webp',
     categoria: "BLOG",
     titulo: "Como hacer un test de hardware en teléfonos Samsung",
     descripcion: "¿Tienes un celular Samsung y quieres saber si funciona correctamente?..."
   },
   {
-    imagen: "/public/noticias/iphone16.jpeg",
+    imagen: "/noticias/iphone16.jpeg",
     categoria: "TECNOLOGÍA",
     titulo: "iPhone 17 : Todo lo que sabemos hasta ahora",
     descripcion: "El iPhone 17 está a la vuelta de la esquina y las expectativas son altas..."
