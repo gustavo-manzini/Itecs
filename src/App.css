@@ -933,6 +933,7 @@ h2 {
   margin-bottom: 40px;
   display: block;
   z-index: 1;
+  background-color: #111419;
 }
 .contact-info {
   position: static;
