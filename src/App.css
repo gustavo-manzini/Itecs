@@ -1584,6 +1584,7 @@ height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: #fff;
 
 }
 
@@ -1611,7 +1612,6 @@ height: auto;
   gap: 30px;
   justify-content: space-around;
   margin-left: 20px;
-  background-color: #fff;
 }
 
 .noticia-card:hover {
