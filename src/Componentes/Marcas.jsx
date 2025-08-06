@@ -1,12 +1,12 @@
 const brands = [
-    { name: "Apple", img: "/public/brands/Apple.webp"},
-    { name: "Google Pixel", img: "/public/brands/Google-pixel.webp"},
-    { name: "Samsung", img: "/public/brands/Samsung.webp"},
-    { name: "Xiaomi", img: "/public/brands/Xiaomi.webp"},
-    { name: "Oppo", img: "/public/brands/Oppo.webp"},
-    { name: "Realme", img: "/public/brands/Realme.png"},
-    { name: "OnePlus", img: "/public/brands/OnePlus.webp"},
-    { name: "Vivo", img:"/public/brands/Vivo.webp"},
+    { name: "Apple", img: "/brands/Apple.webp"},
+    { name: "Google Pixel", img: "/brands/Google-pixel.webp"},
+    { name: "Samsung", img: "/brands/Samsung.webp"},
+    { name: "Xiaomi", img: "/brands/Xiaomi.webp"},
+    { name: "Oppo", img: "/brands/Oppo.webp"},
+    { name: "Realme", img: "/brands/Realme.png"},
+    { name: "OnePlus", img: "/brands/OnePlus.webp"},
+    { name: "Vivo", img:"/brands/Vivo.webp"},
 ];
 
 const BrandSlider = () => {
