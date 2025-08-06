@@ -20,7 +20,7 @@ const Footer = () => {
 
       <div className="footer-columns">
         <div className="footer-about">
-          <img src="/public/logo/logo.webp" className="brand" alt="logo" />
+          <img src="/logo/logo.webp" className="brand" alt="logo" />
           <p>
             Creado por un equipo de técnicos certificados con más de 10 años de
             experiencia reparando celulares, tablets y computadoras.
