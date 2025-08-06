@@ -10,7 +10,7 @@ function Navbar() {
       <div className="navbar-container">
         <Link to="/" className="navbar-logo">
           <img
-            src="./public/logo/logo.jpg"
+            src="/logo/logo.jpg"
             alt="Logo "
             className="logo-itecs"
           />
