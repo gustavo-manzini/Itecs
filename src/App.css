@@ -10,7 +10,7 @@ body {
   align-items: center;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   overflow-x: hidden;
-  background-color: #111419;
+  background-color: #fff;
 }
 
 @media (max-width: 768px) {
@@ -1584,7 +1584,6 @@ height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #fff;
 
 }
 
