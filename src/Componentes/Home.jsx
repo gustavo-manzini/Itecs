@@ -13,7 +13,7 @@ const slideData = [
     text1: "Reparacion de moviles",
     title: <>Reparacion de moviles en Montevideo uruguay</>,
     text2: "Reparación rápida y confiable de dispositivos móviles",
-    img: "public/home/iphone-moviles.webp",
+    img: "/home/iphone-moviles.webp",
     alt: "Reparación de móviles",
     buttons: (
       <>
@@ -30,7 +30,7 @@ const slideData = [
       </>
     ),
     text2: "Más sostenible, más inteligente, más económico",
-    img: "/public/home/iphone16.webp",
+    img: "/home/iphone16.webp",
     alt: "Iphone 16",
     buttons: (
       <>
@@ -46,7 +46,7 @@ const slideData = [
       </>
     ),
     text2: "Ahorra y cuida el planeta",
-    img: "/public/home/Macbookpro.png",
+    img: "/home/Macbookpro.png",
     alt: "MacBook Pro",
     buttons: (
       <>
