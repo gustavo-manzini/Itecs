@@ -3,15 +3,15 @@ import React, { useState } from "react";
 const reparaciones = [
   {
     titulo: "Reparar Móvil",
-    imagen: "/public/reparacion/celulares.webp",
+    imagen: "/reparacion/celulares.webp",
   },
   {
     titulo: "Laptops",
-    imagen: "/public/reparacion/laptop.png",
+    imagen: "/reparacion/laptop.png",
   },
   {
     titulo: "SmartWatches",
-    imagen: "/public/reparacion/smartwatches.png",
+    imagen: "/reparacion/smartwatches.png",
   },
 ];
 
