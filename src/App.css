@@ -13,14 +13,14 @@ body {
   background-color: #111419;
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   body {
     background-color: #fff;
   }
   .contact-container {
     background-color: gray;
   }
-}
+} */
 /* Navbar */  
 .navbar {
   width: 100%;
@@ -39,6 +39,7 @@ body {
   box-sizing: border-box;
 }
 /* Logo */
+
 .navbar-logo {
   font-size: 1.5rem;
   font-weight: bold;
@@ -115,7 +116,7 @@ body {
 }
 
 /* Mobile styles */
-@media (max-width: 768px) {
+ @media (max-width: 768px) {
   .navbar-links {
     overflow: hidden;
     max-height: 0;
@@ -132,7 +133,7 @@ body {
     padding: 0;
     gap: 20px;
     z-index: 10;
-  }
+  } 
 
   .navbar-links.open {
     max-height: 500px; /* Ajusta según el contenido */
@@ -175,7 +176,7 @@ body {
     height: auto;
     border-radius: 1rem;
   }
-}
+
 
 a {
   color: inherit;
@@ -513,7 +514,7 @@ h2 {
 }
 
 /* RESPONSIVE solo para pantallas chicas (768px o menos) */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .slide {
     flex-direction: column;
     text-align: center;
@@ -521,7 +522,7 @@ h2 {
     border-radius: 30px;
     margin: 0 1rem;
   }
-}
+} */
 
 /* deviceselevtor */
 
@@ -723,7 +724,7 @@ h2 {
   text-align: center;
   padding: 18px 0 10px 0;
 }
-@media (max-width: 700px) {
+/* @media (max-width: 700px) {
   .device-selector-container {
     padding: 12px 3vw;
   }
@@ -735,7 +736,7 @@ h2 {
     grid-template-columns: 1fr;
     gap: 12px 0;
   }
-}
+} */
 
 /* nosotros */
 
@@ -832,7 +833,7 @@ h2 {
 }
 /* footer */
 .footer {
-  background-color: #111419;
+  background-color: #014270;
   color: #fff;
   font-family: "Segoe UI", sans-serif;
 }
@@ -933,9 +934,7 @@ h2 {
   margin-bottom: 40px;
   display: block;
   z-index: 1;
-
 }
-
 .contact-info {
   position: static;
   width: 100%;
@@ -950,7 +949,7 @@ h2 {
 }
 
 .contact-container {
-  
+  background-color: #f7f7f7;
   color: black;
   text-align: center;
   padding: 50px 0px;
@@ -1322,7 +1321,7 @@ button:hover {
 }
 
 /* Responsive para móviles */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .contact-section {
     flex-direction: column;
     padding: 0;
@@ -1369,7 +1368,7 @@ button:hover {
     margin: 0;
     border-radius: 0;
   }
-}
+} */
 
 .google-map {
 display: flex;
@@ -1620,6 +1619,7 @@ height: auto;
    box-shadow: 0 0 10px rgba(128, 128, 128, 0.7),
               0 0 20px rgba(128, 128, 128, 0.5),
               0 0 30px rgba(128, 128, 128, 0.3);
+  
 }
 
 .noticia-img {
@@ -1779,7 +1779,7 @@ height: auto;
 .faq-icon {
   font-size: 1.2rem;
 }
- 
+
 .faq-answer {
   margin-top: 10px;
   font-size: 0.95rem;
@@ -1787,3 +1787,40 @@ height: auto;
   line-height: 1.4;
 }
 
+
+
+/* media queris */
+
+
+/* styles.css */
+
+.container-flex {
+  width: 100%;
+  padding: 20px;
+  background-color: #1e1e1e;
+}
+
+/* Teléfonos */
+@media (max-width: 600px) {
+  .container {
+    background-color: lightcoral;
+    padding: 10px;
+  }
+}
+
+/* Tablets */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .container {
+    background-color: lightgreen;
+    padding: 15px;
+  }
+}
+
+/* Escritorio grande */
+@media (min-width: 1025px) {
+  .container {
+    background-color: lightblue;
+    padding: 20px;
+  }
+}
+ }
