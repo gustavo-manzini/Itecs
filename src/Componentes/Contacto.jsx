@@ -16,7 +16,7 @@ const Contacto = () => {
         </p>
         <div style={{ display: "flex", justifyContent: "center", alignItems: "center", gap: "32px", marginBottom: "32px" }}>
           <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
-            <img src="/public/aron/aron.jpg" alt="Perfil técnico" style={{ width: "70px", height: "70px", borderRadius: "50%", objectFit: "cover" }} />
+            <img src="/aron/aron.jpg" alt="Perfil técnico" style={{ width: "70px", height: "70px", borderRadius: "50%", objectFit: "cover" }} />
             <div style={{ textAlign: "left" }}>
               <span style={{ color: "#222", fontSize: "1.1rem" }}>Habla con</span><br />
               <span style={{ fontWeight: 700, fontSize: "1.3rem", color: "#181f2a" }}>Aram</span>
