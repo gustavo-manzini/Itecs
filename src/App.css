@@ -22,7 +22,6 @@ body {
   }
 }
 
-
 /* Navbar */  
 
 .navbar {
@@ -139,7 +138,7 @@ body {
   }
 
   .navbar-links.open {
-    max-height: 500px; /* Ajusta según el contenido */
+    max-height: 500px; 
     opacity: 1;
     padding: 20px 0;
   }
@@ -150,6 +149,7 @@ body {
 
   .navbar-menu-icon {
     display: block;
+    color: white;
   }
   .hero-section {
     flex-direction: column;
