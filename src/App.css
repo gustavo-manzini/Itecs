@@ -724,19 +724,6 @@ h2 {
   text-align: center;
   padding: 18px 0 10px 0;
 }
-/* @media (max-width: 700px) {
-  .device-selector-container {
-    padding: 12px 3vw;
-  }
-  .brands-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 20px 16px;
-  }
-  .models-grid {
-    grid-template-columns: 1fr;
-    gap: 12px 0;
-  }
-} */
 
 /* nosotros */
 
