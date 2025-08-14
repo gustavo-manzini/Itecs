@@ -1,13 +1,5 @@
-
-
-import DeviceSelector from "./DeviceSelector";
-
 function Serviciotecnico() {
-  return (
-    <div>
-      <DeviceSelector />
-    </div>
-  );
+  return <h1>Serviciotecnico</h1>;
 }
 
 export default Serviciotecnico;
