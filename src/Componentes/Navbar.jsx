@@ -10,40 +10,16 @@ function Navbar() {
 
   const totalItems = cart.reduce((sum, item) => sum + item.qty, 0);
 
-  // Cerrar menú al hacer clic fuera
+  // Cerrar menú con escape
   useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (menuOpen && !event.target.closest(".navbar-container")) {
-        setMenuOpen(false);
-      }
-      if (cartOpen && !event.target.closest(".cart-modal") && !event.target.closest(".cart-icon")) {
-        setCartOpen(false);
-      }
-    };
-
     const handleEscapeKey = (event) => {
       if (event.key === "Escape") {
         setMenuOpen(false);
         setCartOpen(false);
       }
     };
-
-    document.addEventListener("click", handleClickOutside);
     document.addEventListener("keydown", handleEscapeKey);
-
-    return () => {
-      document.removeEventListener("click", handleClickOutside);
-      document.removeEventListener("keydown", handleEscapeKey);
-    };
-  }, [menuOpen, cartOpen]);
-
-  // Cerrar menú al cambiar el tamaño de ventana
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth > 768) setMenuOpen(false);
-    };
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+    return () => document.removeEventListener("keydown", handleEscapeKey);
   }, []);
 
   const handleLinkClick = () => setMenuOpen(false);
@@ -74,58 +50,41 @@ function Navbar() {
           <FiUser className="icon" />
 
           {/* Cart Widget */}
-          <div className="cart-icon" onClick={() => setCartOpen(!cartOpen)} style={{ position: "relative", cursor: "pointer" }}>
+          <div className="cart-icon" onClick={() => setCartOpen(true)} style={{ position: "relative", cursor: "pointer" }}>
             <span style={{ fontSize: 24, color: "#fff" }}>🛒</span>
             {totalItems > 0 && (
-              <span style={{
-                position: "absolute",
-                top: -6,
-                right: -10,
-                backgroundColor: "red",
-                color: "#fff",
-                borderRadius: "50%",
-                padding: "2px 6px",
-                fontSize: 12,
-                fontWeight: "bold"
-              }}>
-                {totalItems}
-              </span>
-            )}
-
-            {/* Modal */}
-            {cartOpen && (
-              <div className="cart-modal" style={{
-                position: "absolute",
-                right: 0,
-                top: "40px",
-                width: "300px",
-                maxHeight: "400px",
-                backgroundColor: "#fff",
-                color: "#000",
-                borderRadius: 8,
-                boxShadow: "0 4px 8px rgba(0,0,0,0.2)",
-                padding: 16,
-                overflowY: "auto",
-                zIndex: 100
-              }}>
-                <h4>Mi Carrito</h4>
-                {cart.length === 0 && <p>Carrito vacío</p>}
-                {cart.map(item => (
-                  <div key={item.product.id} style={{ display: "flex", justifyContent: "space-between", marginBottom: 8 }}>
-                    <span>{item.product.name} x {item.qty}</span>
-                    <button onClick={() => removeItem(item.product.id)}>Eliminar</button>
-                  </div>
-                ))}
-                {cart.length > 0 && (
-                  <>
-                    <p>Total: ${total}</p>
-                    <button onClick={clearCart} style={{ marginTop: 8 }}>Vaciar carrito</button>
-                  </>
-                )}
-              </div>
+              <span className="cart-badge">{totalItems}</span>
             )}
           </div>
         </div>
+      </div>
+
+      {/* Overlay oscuro */}
+      {cartOpen && <div className="cart-overlay" onClick={() => setCartOpen(false)}></div>}
+
+      {/* Sidebar carrito */}
+      <div className={`cart-sidebar ${cartOpen ? "open" : ""}`}>
+        <div className="cart-header">
+          <h4>Mi Carrito</h4>
+          <button onClick={() => setCartOpen(false)} className="close-btn">✖</button>
+        </div>
+
+        <div className="cart-items">
+          {cart.length === 0 && <p>Carrito vacío</p>}
+          {cart.map(item => (
+            <div key={item.product.id} className="cart-item">
+              <span>{item.product.name} x {item.qty}</span>
+              <button onClick={() => removeItem(item.product.id)}>Eliminar</button>
+            </div>
+          ))}
+        </div>
+
+        {cart.length > 0 && (
+          <div className="cart-footer">
+            <p>Total: ${total}</p>
+            <button onClick={clearCart}>Vaciar carrito</button>
+          </div>
+        )}
       </div>
     </nav>
   );
