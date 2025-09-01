@@ -1,53 +1,100 @@
-import React, { useState } from "react";
-import FiltroTienda from "./FiltroTienda";
-import Productos from "./Productos";
+import React, { useState, useEffect} from 'react';
+import ProductCard from './ProductCard';
+import QuickViewModal from '/QuickViewModal';
+import { useProducts } from './hooks/useProducts';
+import { useCart } from './hooks/useCart';
 
-
-const datosMock = [
-  { id: 1, nombre: "SSD 240GB", marca: "Kingston", capacidad: "240", precio: 45 },
-  { id: 2, nombre: "Disco 1TB", marca: "Seagate", capacidad: "1TB", precio: 70 },
-  { id: 3, nombre: "Memoria 64GB", marca: "Hoco", capacidad: "64", precio: 15 },
-  { id: 4, nombre: "Mouse Inalámbrico", marca: "Logitech", capacidad: "N/A", precio: 25 },
-  // ... más productos
-];
 
 const Tienda = () => {
-  const [filters, setFilters] = useState({ marcas: [], capacidades: [] });
-  const [priceRange, setPriceRange] = useState({ min: 0, max: 9999 });
+  const {
+    products,
+    filteredProducts,
+    filterProducts,
+    sortProducts,
+    clearAllFilters
+  } = useProducts();
 
-  const handleFilterChange = (type, value) => {
-    setFilters((prev) => {
-      const alreadyChecked = prev[type].includes(value);
-      return {
-        ...prev,
-        [type]: alreadyChecked
-          ? prev[type].filter((item) => item !== value)
-          : [...prev[type], value],
-      };
-    });
-  };
+  const {
+    cart,
+    addToCart,
+    removeFromCart,
+    updateCartQuantity,
+    getCartItemsCount,
+    getCartTotal,
+    clearCart
+  } = useCart();
 
-  const handlePriceChange = (range) => {
-    setPriceRange(range);
-  };
-
-  const productosFiltrados = datosMock.filter((producto) => {
-    const marcaMatch = filters.marcas.length === 0 || filters.marcas.includes(producto.marca);
-    const capacidadMatch =
-      filters.capacidades.length === 0 || filters.capacidades.includes(producto.capacidad);
-    const precioMatch = producto.precio >= priceRange.min && producto.precio <= priceRange.max;
-    return marcaMatch && capacidadMatch && precioMatch;
+  const [quickViewProduct, setQuickViewProduct] = useState(null);
+  const [filters, setFilters] = useState({
+    brand: '',
+    capacity: '',
+    maxPrice: 2000,
+    searchTerm: '',
+    sortBy: 'name'
   });
+
+  useEffect(() => {
+    filterProducts(filters);
+  }, [filters, filterProducts]);
+
+  const handleFilterChange = (newFilters) => {
+    setFilters(prev => ({ ...prev, ...newFilters }));
+  };
+
+  const openQuickView = (product) => {
+    setQuickViewProduct(product);
+  };
+
+  const closeQuickView = () => {
+    setQuickViewProduct(null);
+  };
+
+  const showNotification = (message, type = 'info') => {
+    // Implementación de notificaciones (puedes usar react-toastify)
+    console.log(`${type}: ${message}`);
+  };
 
   return (
     <div className="tienda-container">
-      <FiltroTienda
-        selectedFilters={filters}
-        onFilterChange={handleFilterChange}
-        priceRange={priceRange}
-        onPriceChange={handlePriceChange}
-      />
-      <Productos productos={productosFiltrados} />
+      <div className="container mx-auto px-4 py-8">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 lg:gap-8">
+          <FilterSidebar
+            filters={filters}
+            onFilterChange={handleFilterChange}
+            onClearFilters={clearAllFilters}
+            products={products}
+          />
+          
+          <ProductGrid
+            products={filteredProducts}
+            onAddToCart={(id) => {
+              addToCart(id);
+              showNotification('Producto agregado al carrito', 'success');
+            }}
+            onQuickView={openQuickView}
+            onAddToWishlist={(id) => {
+              showNotification('Producto agregado a favoritos', 'info');
+            }}
+            filters={filters}
+            onFilterChange={handleFilterChange}
+          />
+        </div>
+      </div>
+
+      {quickViewProduct && (
+        <QuickViewModal
+          product={quickViewProduct}
+          onClose={closeQuickView}
+          onAddToCart={(id) => {
+            addToCart(id);
+            closeQuickView();
+            showNotification('Producto agregado al carrito', 'success');
+          }}
+          onAddToWishlist={(id) => {
+            showNotification('Producto agregado a favoritos', 'info');
+          }}
+        />
+      )}
     </div>
   );
 };
