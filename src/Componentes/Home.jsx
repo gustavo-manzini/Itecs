@@ -7,7 +7,6 @@ import UltimasNoticias from "./UltimasNoticias";
 import Marcas from "./Marcas";
 import FaqAccordion from "./FaqAccordion";
 
-
 const slideData = [
   {
     text1: "Reparacion de moviles",
@@ -128,31 +127,39 @@ const Slider = () => {
 function Home() {
   return (
     <>
-      {" "}
       {/* Sección del slider */}
       <section className="hero-section">
         <Slider />
       </section>
+
       {/* Seccion reparacion */}
       <section className="reparacion-section">
         <h2>¿Qué necesitas reparar?</h2>
         <Reparaciones />
       </section>
-      {/* Sección de categorías justo después */}
+
+      {/* Sección de categorías */}
       <section className="categorias-section">
+        <h2>Nuestras Categorías</h2>
         <Categorias />
       </section>
+
       {/* Sección de consultar ordenes */}
       <section className="consultar-ordenes-section">
         <Ordenes />
       </section>
-      {/* ultimas noticias */}
+
+      {/* Ultimas noticias */}
       <section className="ultimas-noticias">
         <UltimasNoticias />
       </section>
+
+      {/* Marcas */}
       <section className="brands">
         <Marcas />
       </section>
+
+      {/* FAQs */}
       <section className="faqs">
         <FaqAccordion />
       </section>

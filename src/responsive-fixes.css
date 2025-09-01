@@ -1,0 +1,159 @@
+/* Responsive Fixes - Additional styles for better mobile experience */
+
+/* Touch targets - make buttons and links easier to tap on mobile */
+@media (max-width: 768px) {
+  button,
+  a,
+  .clickable {
+    min-height: 44px;
+    min-width: 44px;
+    padding: 12px;
+  }
+
+  /* Improve form usability on mobile */
+  input,
+  textarea,
+  select {
+    font-size: 16px; /* Prevents zoom on iOS */
+    padding: 12px;
+    border-radius: 8px;
+  }
+
+  /* Better spacing for mobile reading */
+  p {
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+
+  /* Prevent text from being too close to screen edges */
+  .text-content {
+    padding: 0 1rem;
+  }
+
+  /* Improve card spacing on mobile */
+  .card,
+  .categoria-card,
+  .reparacion-card {
+    margin-bottom: 1rem;
+  }
+
+  /* Make sure images don't cause horizontal scroll */
+  img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  /* Better modal/popup experience on mobile */
+  .modal,
+  .popup {
+    width: 95vw;
+    max-width: 400px;
+    margin: 1rem auto;
+  }
+
+  /* Improve table responsiveness */
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  /* Better navigation for mobile */
+  .nav-mobile {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #111419;
+    padding: 1rem;
+    border-top: 1px solid #333;
+    z-index: 1000;
+  }
+}
+
+/* Landscape phone orientation */
+@media (max-width: 768px) and (orientation: landscape) {
+  .hero-section,
+  .slider-container {
+    height: 80vh;
+  }
+
+  .slide {
+    flex-direction: row;
+  }
+
+  .slide-text h1 {
+    font-size: 2rem;
+  }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  img {
+    image-rendering: -webkit-optimize-contrast;
+  }
+}
+
+/* Dark mode preference */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #111419;
+    --text-color: #ffffff;
+    --card-bg: #1a1d25;
+  }
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Focus management for accessibility */
+:focus {
+  outline: 2px solid #0070f3;
+  outline-offset: 2px;
+}
+
+/* Skip to main content link for screen readers */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: #0070f3;
+  color: white;
+  padding: 8px;
+  text-decoration: none;
+  z-index: 9999;
+}
+
+.skip-link:focus {
+  top: 6px;
+}
+
+/* Loading states */
+.loading {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.skeleton {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}

@@ -1,102 +1,83 @@
-import React, { useState, useEffect} from 'react';
-import ProductCard from './ProductCard';
-import QuickViewModal from '/QuickViewModal';
-import { useProducts } from './hooks/useProducts';
-import { useCart } from './hooks/useCart';
+import { useEffect, useState } from "react";
+import { useCart } from "../context/CartContext";
 
+export default function Tienda() {
+  const [productos, setProductos] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [err, setErr] = useState(null);
+  const { addItem } = useCart();
 
-const Tienda = () => {
-  const {
-    products,
-    filteredProducts,
-    filterProducts,
-    sortProducts,
-    clearAllFilters
-  } = useProducts();
+  // Carga productos desde el backend
+  const loadProducts = async () => {
+    try {
+      setLoading(true);
+      const res = await fetch("http://localhost:8080/api/products");
+      if (!res.ok) throw new Error("No se pudo cargar productos");
+      const data = await res.json();
+      setProductos(data);
+    } catch (e) {
+      setErr(e.message);
+    } finally {
+      setLoading(false);
+    }
+  };
 
-  const {
-    cart,
-    addToCart,
-    removeFromCart,
-    updateCartQuantity,
-    getCartItemsCount,
-    getCartTotal,
-    clearCart
-  } = useCart();
-
-  const [quickViewProduct, setQuickViewProduct] = useState(null);
-  const [filters, setFilters] = useState({
-    brand: '',
-    capacity: '',
-    maxPrice: 2000,
-    searchTerm: '',
-    sortBy: 'name'
-  });
+  // Función para agregar al carrito
+  const handleAgregarCarrito = (producto) => {
+    addItem(producto, 1); // agrega 1 unidad al carrito
+    alert(`${producto.name} agregado al carrito 🛒`);
+  };
 
   useEffect(() => {
-    filterProducts(filters);
-  }, [filters, filterProducts]);
+    loadProducts();
+  }, []);
 
-  const handleFilterChange = (newFilters) => {
-    setFilters(prev => ({ ...prev, ...newFilters }));
-  };
-
-  const openQuickView = (product) => {
-    setQuickViewProduct(product);
-  };
-
-  const closeQuickView = () => {
-    setQuickViewProduct(null);
-  };
-
-  const showNotification = (message, type = 'info') => {
-    // Implementación de notificaciones (puedes usar react-toastify)
-    console.log(`${type}: ${message}`);
-  };
+  if (loading) return <p>Cargando productos...</p>;
+  if (err) return <p>Error: {err}</p>;
 
   return (
-    <div className="tienda-container">
-      <div className="container mx-auto px-4 py-8">
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 lg:gap-8">
-          <FilterSidebar
-            filters={filters}
-            onFilterChange={handleFilterChange}
-            onClearFilters={clearAllFilters}
-            products={products}
-          />
-          
-          <ProductGrid
-            products={filteredProducts}
-            onAddToCart={(id) => {
-              addToCart(id);
-              showNotification('Producto agregado al carrito', 'success');
+    <section style={{ maxWidth: 900, margin: "40px auto", padding: 16 }}>
+      <h2 style={{ color: "#fff", marginBottom: 16, textAlign: "center" }}>
+        Tienda de Servicios
+      </h2>
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fill, minmax(220px, 1fr))",
+          gap: 16,
+        }}
+      >
+        {productos.map((p) => (
+          <article
+            key={p.id}
+            style={{
+              border: "1px solid #ddd",
+              borderRadius: 12,
+              padding: 16,
+              backgroundColor: "#fff",
             }}
-            onQuickView={openQuickView}
-            onAddToWishlist={(id) => {
-              showNotification('Producto agregado a favoritos', 'info');
-            }}
-            filters={filters}
-            onFilterChange={handleFilterChange}
-          />
-        </div>
+          >
+            <h3 style={{ margin: "0 0 8px" }}>{p.name}</h3>
+            <p style={{ margin: "4px 0" }}>Precio: ${p.price}</p>
+            <p style={{ margin: "4px 0" }}>Stock: {p.stock}</p>
+
+            <button
+              onClick={() => handleAgregarCarrito(p)}
+              disabled={p.stock === 0}
+              style={{
+                padding: "8px 12px",
+                borderRadius: 10,
+                border: "none",
+                backgroundColor: p.stock === 0 ? "#ccc" : "#007bff",
+                color: "#fff",
+                cursor: p.stock === 0 ? "not-allowed" : "pointer",
+              }}
+            >
+              {p.stock > 0 ? "Agregar al carrito" : "Sin stock"}
+            </button>
+          </article>
+        ))}
       </div>
-
-      {quickViewProduct && (
-        <QuickViewModal
-          product={quickViewProduct}
-          onClose={closeQuickView}
-          onAddToCart={(id) => {
-            addToCart(id);
-            closeQuickView();
-            showNotification('Producto agregado al carrito', 'success');
-          }}
-          onAddToWishlist={(id) => {
-            showNotification('Producto agregado a favoritos', 'info');
-          }}
-        />
-      )}
-    </div>
+    </section>
   );
-};
-
-export default Tienda;
+}

@@ -1,7 +1,6 @@
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
-// import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 
@@ -12,11 +11,13 @@ import Nosotros from "./Componentes/Nosotros";
 import Contacto from "./Componentes/Contacto";
 import ServicioTecnico from "./Componentes/Serviciotecnico";
 import Footer from "./Componentes/Footer";
+import { CartProvider } from "./context/CartContext";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Navbar />
+    <CartProvider>
+      <BrowserRouter>
+        <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/servicio-tecnico" element={<ServicioTecnico />} />
@@ -24,9 +25,9 @@ function App() {
         <Route path="/nosotros" element={<Nosotros />} />
         <Route path="/contacto" element={<Contacto />} />
       </Routes>
-
       <Footer />
     </BrowserRouter>
+  </CartProvider>
   );
 }
 
